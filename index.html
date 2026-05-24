@@ -21,6 +21,14 @@
       --violet-soft: #e8e7fb;
       --amber: #9d6a17;
       --amber-soft: #f4ead4;
+      --sky: #166d8f;
+      --sky-soft: #e1f1f6;
+      --rose: #a94b65;
+      --rose-soft: #f7e2e8;
+      --theme: var(--mint);
+      --theme-deep: #075f54;
+      --theme-soft: var(--mint-soft);
+      --theme-line: rgba(11, 122, 107, 0.2);
       --shadow: 0 18px 50px rgba(31, 43, 35, 0.13);
       --radius: 8px;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -377,38 +385,103 @@
     }
 
     .outing {
+      position: relative;
       display: grid;
       grid-template-columns: 360px minmax(0, 1fr);
+      grid-template-areas:
+        "media body"
+        "route body";
       align-items: start;
       overflow: hidden;
-      border: 1px solid var(--line);
+      border: 1px solid var(--theme-line);
       border-radius: var(--radius);
-      background: white;
-      box-shadow: 0 12px 34px rgba(31, 43, 35, 0.08);
+      background:
+        linear-gradient(90deg, var(--theme-soft) 0%, rgba(255, 255, 255, 0.96) 36%, #fff 100%);
+      box-shadow: 0 16px 42px rgba(31, 43, 35, 0.1);
     }
 
-    .outing.selected {
-      border-color: rgba(11, 122, 107, 0.48);
-      box-shadow: 0 0 0 3px rgba(11, 122, 107, 0.12), 0 18px 42px rgba(31, 43, 35, 0.12);
+    .outing::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      z-index: 3;
+      width: 5px;
+      background: linear-gradient(180deg, var(--theme), var(--theme-deep));
+      opacity: 0.9;
+    }
+
+    .outing.theme-nature {
+      --theme: #0b7a6b;
+      --theme-deep: #075f54;
+      --theme-soft: #e2f4ed;
+      --theme-line: rgba(11, 122, 107, 0.22);
+    }
+
+    .outing.theme-sea {
+      --theme: var(--sky);
+      --theme-deep: #0f5570;
+      --theme-soft: var(--sky-soft);
+      --theme-line: rgba(22, 109, 143, 0.22);
+    }
+
+    .outing.theme-event {
+      --theme: var(--coral);
+      --theme-deep: #9f382d;
+      --theme-soft: var(--coral-soft);
+      --theme-line: rgba(200, 78, 63, 0.23);
+    }
+
+    .outing.theme-culture {
+      --theme: var(--violet);
+      --theme-deep: #39347f;
+      --theme-soft: var(--violet-soft);
+      --theme-line: rgba(93, 90, 191, 0.23);
+    }
+
+    .outing.theme-chill {
+      --theme: var(--rose);
+      --theme-deep: #783147;
+      --theme-soft: var(--rose-soft);
+      --theme-line: rgba(169, 75, 101, 0.22);
+    }
+
+    .outing.theme-activity {
+      --theme: var(--amber);
+      --theme-deep: #734907;
+      --theme-soft: var(--amber-soft);
+      --theme-line: rgba(157, 106, 23, 0.24);
     }
 
     .outing-media {
       position: relative;
+      grid-area: media;
       min-height: 430px;
       height: 430px;
       background: var(--soft);
+      border-right: 1px solid var(--theme-line);
+    }
+
+    .outing-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 48%, rgba(12, 24, 20, 0.28)),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1), transparent 34%);
     }
 
     .outing-left {
-      min-width: 0;
-      background: var(--paper);
-      border-right: 1px solid var(--line);
+      display: contents;
     }
 
     .route-preview {
+      grid-area: route;
       padding: 12px;
-      border-top: 1px solid var(--line);
-      background: #f7faf8;
+      border-top: 1px solid var(--theme-line);
+      border-right: 1px solid var(--theme-line);
+      background: linear-gradient(180deg, #ffffff 0%, var(--theme-soft) 100%);
     }
 
     .route-preview h4 {
@@ -416,7 +489,7 @@
       align-items: center;
       gap: 7px;
       margin: 0 0 9px;
-      color: var(--muted);
+      color: var(--theme-deep);
       font-size: 0.84rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
@@ -426,9 +499,10 @@
       width: 100%;
       height: 250px;
       overflow: hidden;
-      border: 1px solid var(--line);
+      border: 1px solid var(--theme-line);
       border-radius: 8px;
-      background: #dcebf7;
+      background: #eaf1ef;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.72);
     }
 
     .route-map {
@@ -459,7 +533,7 @@
       left: 24%;
       right: 24%;
       top: 46%;
-      border-top: 4px solid rgba(200, 78, 63, 0.78);
+      border-top: 4px solid var(--theme);
       transform: rotate(-8deg);
       box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.65);
     }
@@ -484,7 +558,7 @@
       height: 10px;
       margin: 0 auto 4px;
       border-radius: 50%;
-      background: var(--coral);
+      background: var(--theme);
     }
 
     .route-start::before {
@@ -499,7 +573,7 @@
       padding: 6px 9px;
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.82);
-      color: #315063;
+      color: var(--theme-deep);
       font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
@@ -511,6 +585,10 @@
 
     .leaflet-container {
       font: inherit;
+    }
+
+    .route-map.loaded .leaflet-tile {
+      filter: saturate(0.78) contrast(0.92) brightness(1.05);
     }
 
     .leaflet-control-attribution {
@@ -552,6 +630,8 @@
       min-height: 0;
       object-fit: cover;
       display: block;
+      filter: saturate(0.94) contrast(1.03) brightness(0.98);
+      transform: scale(1.01);
     }
 
     .outing-media img.failed {
@@ -560,7 +640,7 @@
 
     .rank {
       position: absolute;
-      z-index: 2;
+      z-index: 4;
       top: 14px;
       left: 14px;
       display: grid;
@@ -577,7 +657,7 @@
 
     .photo-label {
       position: absolute;
-      z-index: 2;
+      z-index: 4;
       right: 12px;
       bottom: 12px;
       max-width: calc(100% - 24px);
@@ -591,7 +671,9 @@
     }
 
     .outing-body {
+      grid-area: body;
       padding: 18px;
+      background: rgba(255, 255, 255, 0.92);
     }
 
     .outing-head {
@@ -604,14 +686,15 @@
 
     .outing h3 {
       margin: 0;
-      font-size: clamp(1.32rem, 2.3vw, 1.9rem);
+      color: #121b17;
+      font-size: clamp(1.42rem, 2.5vw, 2rem);
       line-height: 1.12;
       letter-spacing: 0;
     }
 
     .title-line {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
       flex-wrap: wrap;
     }
@@ -622,14 +705,17 @@
       width: 44px;
       height: 44px;
       border-radius: 8px;
-      background: var(--mint-soft);
-      border: 1px solid rgba(11, 122, 107, 0.18);
+      background: var(--theme-soft);
+      border: 1px solid var(--theme-line);
       font-size: 1.45rem;
       flex: 0 0 auto;
+      box-shadow: 0 8px 20px rgba(31, 43, 35, 0.08);
     }
 
     .pitch {
-      margin: 8px 0 0;
+      margin: 10px 0 0;
+      padding-left: 12px;
+      border-left: 3px solid var(--theme);
       color: var(--ink);
       font-size: 1.02rem;
       line-height: 1.55;
@@ -658,9 +744,9 @@
       border-radius: 8px;
       font-size: 0.86rem;
       line-height: 1.2;
-      color: #214139;
-      background: var(--mint-soft);
-      border: 1px solid rgba(11, 122, 107, 0.16);
+      color: var(--theme-deep);
+      background: var(--theme-soft);
+      border: 1px solid var(--theme-line);
     }
 
     .pill.event {
@@ -683,11 +769,12 @@
     }
 
     .decision {
-      border: 1px solid var(--line);
+      border: 1px solid var(--theme-line);
       border-radius: 8px;
       padding: 12px;
-      background: var(--paper);
+      background: linear-gradient(180deg, #ffffff 0%, rgba(251, 252, 250, 0.9) 100%);
       min-width: 0;
+      box-shadow: 0 8px 20px rgba(31, 43, 35, 0.045);
     }
 
     .decision h4 {
@@ -696,7 +783,7 @@
       gap: 7px;
       margin: 0 0 7px;
       font-size: 0.84rem;
-      color: var(--muted);
+      color: var(--theme-deep);
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
@@ -712,7 +799,7 @@
     .per-person {
       display: block;
       margin-top: 2px;
-      color: var(--muted);
+      color: var(--theme-deep);
       font-size: 0.82rem;
       font-weight: 600;
     }
@@ -790,6 +877,10 @@
       .toolbar-inner,
       .outing {
         grid-template-columns: 1fr;
+        grid-template-areas:
+          "media"
+          "body"
+          "route";
       }
 
       .outing-media img {
@@ -803,12 +894,16 @@
       }
 
       .outing-left {
+        display: contents;
+      }
+
+      .outing-media,
+      .route-preview {
         border-right: 0;
-        border-bottom: 1px solid var(--line);
       }
 
       .route-frame {
-        height: 230px;
+        height: 210px;
       }
     }
 
@@ -854,6 +949,10 @@
       .chooser,
       .info-grid {
         grid-template-columns: 1fr;
+      }
+
+      .budget-decision {
+        order: -1;
       }
 
       .selected-box {
@@ -1379,6 +1478,22 @@
       return "";
     }
 
+    function themeClass(outing) {
+      const themes = {
+        "saint-guilhem": "theme-nature",
+        "aigues-mortes": "theme-sea",
+        "larzac": "theme-activity",
+        "uzes-pont": "theme-culture",
+        "feria-nimes": "theme-event",
+        "saintes-maries": "theme-sea",
+        "transhumance-lespignan": "theme-event",
+        "pezenas": "theme-chill",
+        "baux-carrieres": "theme-culture",
+        "sete-thau": "theme-sea"
+      };
+      return themes[outing.id] || "theme-nature";
+    }
+
     function routeDestination(outing) {
       const route = routePreviews[outing.id];
       return route ? route.label : outing.title;
@@ -1404,6 +1519,9 @@
         if (!outing) return;
 
         const route = routeData(outing);
+        const styles = getComputedStyle(node);
+        const themeColor = styles.getPropertyValue("--theme").trim() || "#c84e3f";
+        const themeDeep = styles.getPropertyValue("--theme-deep").trim() || themeColor;
         const map = L.map(node, {
           zoomControl: false,
           dragging: false,
@@ -1420,9 +1538,9 @@
         }).addTo(map);
 
         const line = L.polyline(route.points, {
-          color: "#c84e3f",
+          color: themeColor,
           weight: 4,
-          opacity: 0.9
+          opacity: 0.82
         }).addTo(map);
 
         L.circleMarker(route.points[0], {
@@ -1434,8 +1552,8 @@
 
         L.circleMarker(route.points[route.points.length - 1], {
           radius: 5,
-          color: "#c84e3f",
-          fillColor: "#c84e3f",
+          color: themeDeep,
+          fillColor: themeColor,
           fillOpacity: 1
         }).addTo(map).bindTooltip(route.label, { permanent: true, direction: "top" });
 
@@ -1454,7 +1572,7 @@
       cards.innerHTML = visible.map(outing => {
         const route = routeData(outing);
         return `
-          <article class="outing" id="${outing.id}">
+          <article class="outing ${themeClass(outing)}" id="${outing.id}">
             <div class="outing-left">
               <div class="outing-media">
                 <img src="${outing.image}" alt="${outing.imageLabel}" loading="lazy" onerror="this.classList.add('failed')">
@@ -1490,22 +1608,22 @@
               </div>
 
               <div class="decision-grid">
-                <div class="decision">
+                <div class="decision route-decision">
                   <h4>${icon("route")} Trajet</h4>
                   <p>${outing.drive}</p>
                   <small>Voiture sans péage depuis Montpellier</small>
                 </div>
-                <div class="decision">
+                <div class="decision budget-decision">
                   <h4>${icon("wallet")} Budget</h4>
                   <p>${outing.budget}<span class="per-person">par personne</span></p>
                   <small>${outing.budgetDetail}</small>
                 </div>
-                <div class="decision">
+                <div class="decision effort-decision">
                   <h4>${icon("spark")} Effort</h4>
                   <p>${outing.effort}</p>
                   <small>${outing.duration}</small>
                 </div>
-                <div class="decision">
+                <div class="decision moment-decision">
                   <h4>${icon("calendar")} Moment</h4>
                   <p>${outing.bestMoment}</p>
                   <small>Moment conseillé pour profiter de la sortie</small>
