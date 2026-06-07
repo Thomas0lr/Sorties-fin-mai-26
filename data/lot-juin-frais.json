@@ -1,0 +1,769 @@
+{
+  "meta": {
+    "slug": "juin-frais",
+    "title": "Lot anti-chaleur - 13-14 juin 2026",
+    "heading": "Lot anti-chaleur 13-14 juin 2026",
+    "intro": "Composé depuis la bibliothèque, horaires et sources vérifiés sur le web le 7 juin 2026. Pour 2-3 personnes au départ de Montpellier ; reconfirmer horaires/tarifs la veille.",
+    "sectionTitle": "Les 10 sorties a choisir",
+    "sectionIntro": "Lieux issus de la bibliothèque ; horaires et sources vérifiés le 7 juin 2026 ; photos locales ou Wikimedia Commons.",
+    "note": "<strong>Vérifié le 7 juin 2026 :</strong> horaires et sources officielles renseignés. À reconfirmer la veille (saison/jours fériés). <strong>Scamandre fermé le dimanche</strong> (à faire samedi) ; <strong>Bois des Aresquiers</strong> pouvant fermer en cas de risque incendie.",
+    "origin": [
+      43.6108,
+      3.8767
+    ],
+    "originLabel": "Montpellier",
+    "dayStart": 8,
+    "dayEnd": 20
+  },
+  "outings": [
+    {
+      "id": "saint-guilhem",
+      "title": "Saint-Guilhem + canoë + Grotte de Clamouse",
+      "emoji": "",
+      "theme": "theme-cave",
+      "image": "assets/clamouse-couloir.jpg",
+      "imageLabel": "Saint-Guilhem + canoë + Grotte de Clamouse",
+      "drive": "45 min",
+      "destination": "Gorges de l'Hérault",
+      "coords": [
+        43.61056,
+        3.00829
+      ],
+      "badges": [
+        "Eau",
+        "Patrimoine",
+        "Grotte fraiche"
+      ],
+      "pitch": "Évadez-vous de la chaleur en naviguant sur l'eau et en explorant les profondeurs de la terre.",
+      "subtitle": "Aventure fraîcheur dans les Gorges de l'Hérault.",
+      "budget": "45-60 EUR",
+      "budgetDetail": "Canoë 16–26 € + Clamouse adulte 11,60 € + repas simple 15–20 € (juin 2026).",
+      "effort": "Modéré",
+      "duration": "Journée complète",
+      "availability": "Grotte de Clamouse ouverte tlj en juin, départs guidés ~toutes les heures 10h30–18h ; canoë selon loueur. Réserver les deux.",
+      "bestMoment": "matin",
+      "activities": [
+        "Descente en canoë sur les Gorges de l'Hérault",
+        "Exploration de la Grotte de Clamouse",
+        "Découverte du patrimoine de Saint-Guilhem"
+      ],
+      "itinerary": [
+        "Navigation en canoë le long des gorges",
+        "Visite de la Grotte de Clamouse",
+        "Pause déjeuner à Saint-Guilhem"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Saint-Guilhem + canoë + Grotte de Clamouse",
+          "sourceLabel": "Grotte de Clamouse — site officiel",
+          "source": "https://www.clamouse.com/fr/accueil/"
+        },
+        "activityToDo": {
+          "name": "Saint-Guilhem + canoë + Grotte de Clamouse",
+          "sourceLabel": "Canoë Gorges de l'Hérault — Hérault Tourisme",
+          "source": "https://www.herault-tourisme.com/"
+        }
+      },
+      "sources": [
+        [
+          "Grotte de Clamouse — site officiel",
+          "https://www.clamouse.com/fr/accueil/"
+        ],
+        [
+          "Canoë Gorges de l'Hérault — Hérault Tourisme",
+          "https://www.herault-tourisme.com/"
+        ]
+      ],
+      "photoCredit": "Photo locale (Grotte de Clamouse)"
+    },
+    {
+      "id": "seaquarium",
+      "title": "Seaquarium + Grau-du-Roi",
+      "emoji": "",
+      "theme": "theme-sea",
+      "image": "assets/seaquarium.jpg",
+      "imageLabel": "Seaquarium + Grau-du-Roi",
+      "drive": "40 min",
+      "destination": "Grau-du-Roi",
+      "coords": [
+        43.54079,
+        4.13654
+      ],
+      "badges": [
+        "Mer",
+        "Aquarium",
+        "Abrite"
+      ],
+      "pitch": "Plongez dans un univers aquatique pour une parenthèse rafraîchissante en bord de mer.",
+      "subtitle": "Immersion marine au Grau-du-Roi.",
+      "budget": "17-35 EUR",
+      "budgetDetail": "Seaquarium adulte 17 €, enfant 12,50 € (juin 2026) ; + balade front de mer.",
+      "effort": "Faible",
+      "duration": "Demi-journée",
+      "availability": "Tous les jours 9h30–19h30 (1 avr–30 juin 2026) ; caisses –1h.",
+      "bestMoment": "13h–16h au frais",
+      "activities": [
+        "Visite du Seaquarium",
+        "Balade sur la plage du Grau-du-Roi"
+      ],
+      "itinerary": [
+        "Découverte des espèces marines au Seaquarium",
+        "Promenade relaxante au Grau-du-Roi"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Seaquarium + Grau-du-Roi",
+          "sourceLabel": "Seaquarium — horaires officiels",
+          "source": "https://www.seaquarium.fr/fr/horaires/"
+        },
+        "activityToDo": {
+          "name": "Seaquarium + Grau-du-Roi",
+          "sourceLabel": "Seaquarium — horaires officiels",
+          "source": "https://www.seaquarium.fr/fr/horaires/"
+        }
+      },
+      "sources": [
+        [
+          "Seaquarium — horaires officiels",
+          "https://www.seaquarium.fr/fr/horaires/"
+        ]
+      ],
+      "photoCredit": "Photo locale"
+    },
+    {
+      "id": "musee-etang-thau-bouzigues",
+      "title": "Musee de l Etang de Thau + port de Bouzigues",
+      "emoji": "",
+      "theme": "theme-museum",
+      "image": "assets/bouzigues-bateau.jpg",
+      "imageLabel": "Musee de l Etang de Thau + port de Bouzigues",
+      "drive": "35-45 min",
+      "destination": "Bouzigues",
+      "coords": [
+        43.44702,
+        3.65901
+      ],
+      "badges": [
+        "Petit budget",
+        "Musee",
+        "Mer"
+      ],
+      "pitch": "Une échappée culturelle et maritime à l'abri des rayons du soleil.",
+      "subtitle": "Culture et bord de mer à Bouzigues.",
+      "budget": "3-15 EUR",
+      "budgetDetail": "Entrée musée modique ; balade du port de Bouzigues gratuite.",
+      "effort": "Faible",
+      "duration": "1h30 a demi-journee",
+      "availability": "Mardi–dimanche 10h–12h et 14h–18h (juin) ; fermé le lundi.",
+      "bestMoment": "matin",
+      "activities": [
+        "Visite du Musée de l'Étang de Thau",
+        "Déambulation au port de Bouzigues"
+      ],
+      "itinerary": [
+        "Visite du musée local",
+        "Pause au port de Bouzigues"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Musee de l Etang de Thau + port de Bouzigues",
+          "sourceLabel": "Musée de l'Étang de Thau — Bouzigues",
+          "source": "https://www.bouzigues.fr/musee-de-letang-de-thau/"
+        },
+        "activityToDo": {
+          "name": "Musee de l Etang de Thau + port de Bouzigues",
+          "sourceLabel": "Musée de l'Étang de Thau — Bouzigues",
+          "source": "https://www.bouzigues.fr/musee-de-letang-de-thau/"
+        }
+      },
+      "sources": [
+        [
+          "Musée de l'Étang de Thau — Bouzigues",
+          "https://www.bouzigues.fr/musee-de-letang-de-thau/"
+        ]
+      ],
+      "photoCredit": "Photo locale (port de Bouzigues)"
+    },
+    {
+      "id": "valmagne",
+      "title": "Abbaye de Valmagne",
+      "emoji": "",
+      "theme": "theme-garden",
+      "image": "assets/valmagne-printemps.jpg",
+      "imageLabel": "Abbaye de Valmagne",
+      "drive": "45 min",
+      "destination": "Villeveyrac",
+      "coords": [
+        43.50172,
+        3.6075
+      ],
+      "badges": [
+        "Patrimoine",
+        "Jardin",
+        "Ombre partielle"
+      ],
+      "pitch": "Retraitez-vous dans le calme d'une abbaye historique et ses jardins verdoyants.",
+      "subtitle": "Sérénité au cœur du vignoble de Valmagne.",
+      "budget": "12-35 EUR",
+      "budgetDetail": "Abbaye adulte 8 €, enfant 6,50 € (2026) ; dégustation vins bio incluse.",
+      "effort": "Faible",
+      "duration": "Demi-journée",
+      "availability": "Mardi–dimanche 10h–19h (15 avr–30 sept) ; fermé lundi. Visites commentées 11h / 15h / 16h15.",
+      "bestMoment": "matin ou fin d'après-midi",
+      "activities": [
+        "Visite de l'Abbaye de Valmagne",
+        "Découverte des jardins et du vignoble",
+        "Dégustation sur place"
+      ],
+      "itinerary": [
+        "Visite guidée ou libre de l'abbaye",
+        "Promenade dans les jardins",
+        "Pause détente au milieu des vignes"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Abbaye de Valmagne",
+          "sourceLabel": "Abbaye de Valmagne — site officiel",
+          "source": "https://www.valmagne.com/"
+        },
+        "activityToDo": {
+          "name": "Abbaye de Valmagne",
+          "sourceLabel": "Abbaye de Valmagne — site officiel",
+          "source": "https://www.valmagne.com/"
+        }
+      },
+      "sources": [
+        [
+          "Abbaye de Valmagne — site officiel",
+          "https://www.valmagne.com/"
+        ]
+      ],
+      "photoCredit": "Photo locale"
+    },
+    {
+      "id": "planet-ocean-montpellier",
+      "title": "Planet Ocean Montpellier",
+      "emoji": "",
+      "theme": "theme-sea",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20Mare%20Nostrum%20Aquarium%20in%20Montpellier%20by%20Mikani.jpg?width=900",
+      "imageLabel": "Planet Ocean Montpellier",
+      "drive": "15-20 min",
+      "destination": "Montpellier",
+      "coords": [
+        43.61124,
+        3.87673
+      ],
+      "badges": [
+        "Aquarium",
+        "Abrite",
+        "Famille"
+      ],
+      "pitch": "Explorez les mystères de l'océan dans un univers immersif et frais.",
+      "subtitle": "Immersion marine à l'Odysseum.",
+      "budget": "15-30 EUR",
+      "budgetDetail": "Aquarium + planétarium ; tarif modéré, ~2h de visite.",
+      "effort": "Faible",
+      "duration": "Demi-journee",
+      "availability": "Tous les jours 10h–19h (dernier accès 17h30) en juin ; sans réservation.",
+      "bestMoment": "13h–17h au frais",
+      "activities": [
+        "Parcours interactif au Planet Ocean",
+        "Découverte de la faune marine"
+      ],
+      "itinerary": [
+        "Exploration des bassins et aquariums",
+        "Pause détente en intérieur"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Planet Ocean Montpellier",
+          "sourceLabel": "Planet Ocean Montpellier — horaires officiels",
+          "source": "https://www.planetoceanworld.fr/horaires-tarifs/"
+        },
+        "activityToDo": {
+          "name": "Planet Ocean Montpellier",
+          "sourceLabel": "Planet Ocean Montpellier — horaires officiels",
+          "source": "https://www.planetoceanworld.fr/horaires-tarifs/"
+        }
+      },
+      "sources": [
+        [
+          "Planet Ocean Montpellier — horaires officiels",
+          "https://www.planetoceanworld.fr/horaires-tarifs/"
+        ]
+      ],
+      "photoCredit": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Entrance_Mare_Nostrum_Aquarium_in_Montpellier_by_Mikani.jpg"
+    },
+    {
+      "id": "chateau-flaugergues",
+      "title": "Chateau de Flaugergues + jardins",
+      "emoji": "",
+      "theme": "theme-garden",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ch%C3%A2teau%20de%20Flaugergues.jpg?width=900",
+      "imageLabel": "Chateau de Flaugergues + jardins",
+      "drive": "15-20 min",
+      "destination": "Montpellier",
+      "coords": [
+        43.61124,
+        3.87673
+      ],
+      "badges": [
+        "Patrimoine",
+        "Jardin",
+        "Ombre partielle"
+      ],
+      "pitch": "Une escale élégante entre patrimoine historique et fraîcheur des jardins.",
+      "subtitle": "Évasion au Château de Flaugergues.",
+      "budget": "8-25 EUR",
+      "budgetDetail": "Visite guidée adulte 12 €, réduit 9 €, –12 ans gratuit (2026).",
+      "effort": "Faible",
+      "duration": "1h30 a demi-journee",
+      "availability": "Jardins dim & fériés 13h–19h ; château tous les après-midi sauf lundi 14h–19h (visite guidée). Sam 13 : château ; dim 14 : jardins + château.",
+      "bestMoment": "fin d'après-midi",
+      "activities": [
+        "Visite du château",
+        "Balade dans les jardins",
+        "Dégustation dans le domaine"
+      ],
+      "itinerary": [
+        "Découverte des jardins et du patrimoine",
+        "Visite du château",
+        "Pause détente sur le domaine"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Chateau de Flaugergues + jardins",
+          "sourceLabel": "Château de Flaugergues — infos pratiques",
+          "source": "https://www.flaugergues.com/informations-pratiques/"
+        },
+        "activityToDo": {
+          "name": "Chateau de Flaugergues + jardins",
+          "sourceLabel": "Château de Flaugergues — infos pratiques",
+          "source": "https://www.flaugergues.com/informations-pratiques/"
+        }
+      },
+      "sources": [
+        [
+          "Château de Flaugergues — infos pratiques",
+          "https://www.flaugergues.com/informations-pratiques/"
+        ]
+      ],
+      "photoCredit": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Flaugergues.jpg"
+    },
+    {
+      "id": "bois-aresquiers",
+      "title": "Bois des Aresquiers + lagunes de Vic et Ingril",
+      "emoji": "",
+      "theme": "theme-sea",
+      "image": "assets/frontignan-canal.jpg",
+      "imageLabel": "Bois des Aresquiers + lagunes de Vic et Ingril",
+      "drive": "25-35 min",
+      "destination": "Vic-la-Gardiole",
+      "coords": [
+        43.48692,
+        3.79616
+      ],
+      "badges": [
+        "Gratuit",
+        "Mer",
+        "Eau"
+      ],
+      "pitch": "Une balade naturelle à l'ombre des arbres et au bord des lagunes.",
+      "subtitle": "Nature sauvage aux lagunes de Vic et Ingril.",
+      "budget": "0-15 EUR",
+      "budgetDetail": "Gratuit ; prévoir eau, chapeau et chaussures de marche.",
+      "effort": "Faible",
+      "duration": "1h30 a demi-journee",
+      "availability": "Accès libre toute l'année (parking au Pont des Aresquiers, Vic-la-Gardiole). ⚠ Pinède fermable l'été en cas de risque incendie.",
+      "bestMoment": "tôt le matin ou en soirée",
+      "activities": [
+        "Balade dans le Bois des Aresquiers",
+        "Observation des oiseaux sur les lagunes"
+      ],
+      "itinerary": [
+        "Promenade sous les arbres pour rester au frais",
+        "Observation de la faune sauvage"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Bois des Aresquiers + lagunes de Vic et Ingril",
+          "sourceLabel": "Bois des Aresquiers — Conservatoire du littoral",
+          "source": "https://www.conservatoire-du-littoral.fr/siteLittoral/47/28-bois-des-aresquiers-34_herault.htm"
+        },
+        "activityToDo": {
+          "name": "Bois des Aresquiers + lagunes de Vic et Ingril",
+          "sourceLabel": "Vigilance incendie — Préfecture de l'Hérault",
+          "source": "https://www.herault.gouv.fr/"
+        }
+      },
+      "sources": [
+        [
+          "Bois des Aresquiers — Conservatoire du littoral",
+          "https://www.conservatoire-du-littoral.fr/siteLittoral/47/28-bois-des-aresquiers-34_herault.htm"
+        ],
+        [
+          "Vigilance incendie — Préfecture de l'Hérault",
+          "https://www.herault.gouv.fr/"
+        ]
+      ],
+      "photoCredit": "Photo locale (zone Frontignan/Aresquiers)"
+    },
+    {
+      "id": "chateau-mogere",
+      "title": "Chateau de la Mogere",
+      "emoji": "",
+      "theme": "theme-garden",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chateau%20de%20la%20Mogere%2020120818%2001.jpg?width=900",
+      "imageLabel": "Chateau de la Mogere",
+      "drive": "15-25 min",
+      "destination": "Montpellier",
+      "coords": [
+        43.61124,
+        3.87673
+      ],
+      "badges": [
+        "Petit budget",
+        "Patrimoine",
+        "Jardin"
+      ],
+      "pitch": "Une parenthèse historique et artistique à l'abri des fortes chaleurs.",
+      "subtitle": "Découverte de la folie montpelliéraine.",
+      "budget": "5-20 EUR",
+      "budgetDetail": "Jardins en visite libre, tarif modéré ; château sur réservation.",
+      "effort": "Faible",
+      "duration": "1h30 a demi-journee",
+      "availability": "Jardins en visite libre tous les après-midi 14h30–18h30 (1 juin–30 sept) ; château sur réservation.",
+      "bestMoment": "fin d'après-midi",
+      "activities": [
+        "Visite du Château de la Mogère",
+        "Promenade dans les jardins"
+      ],
+      "itinerary": [
+        "Visite guidée ou libre du château",
+        "Exploration des jardins environnants"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Chateau de la Mogere",
+          "sourceLabel": "Château de la Mogère — site officiel",
+          "source": "http://www.lamogere.fr/"
+        },
+        "activityToDo": {
+          "name": "Chateau de la Mogere",
+          "sourceLabel": "Château de la Mogère — site officiel",
+          "source": "http://www.lamogere.fr/"
+        }
+      },
+      "sources": [
+        [
+          "Château de la Mogère — site officiel",
+          "http://www.lamogere.fr/"
+        ]
+      ],
+      "photoCredit": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Chateau_de_la_Mogere_20120818_01.jpg"
+    },
+    {
+      "id": "centre-scamandre",
+      "title": "Reserve du Scamandre + sentiers de Camargue gardoise",
+      "emoji": "",
+      "theme": "theme-nature",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Etang%20de%20Scamandre%20en%20automne.jpg?width=900",
+      "imageLabel": "Reserve du Scamandre + sentiers de Camargue gardoise",
+      "drive": "40-55 min",
+      "destination": "Vauvert",
+      "coords": [
+        43.69244,
+        4.27548
+      ],
+      "badges": [
+        "Gratuit",
+        "Eau",
+        "Ombre partielle"
+      ],
+      "pitch": "Une immersion sauvage dans la nature préservée de la Camargue.",
+      "subtitle": "Nature et faune au fil du Scamandre.",
+      "budget": "0-15 EUR",
+      "budgetDetail": "Entrée libre ; visite guidée 8 € adulte, 4 € enfant.",
+      "effort": "Faible",
+      "duration": "Demi-journee",
+      "availability": "Mardi–samedi 9h–18h ; ⚠ FERMÉ le dimanche et jours fériés. À faire le samedi 13 juin.",
+      "bestMoment": "matin (oiseaux, plus frais)",
+      "activities": [
+        "Balade sur les sentiers de Camargue gardoise",
+        "Observation des oiseaux sauvages"
+      ],
+      "itinerary": [
+        "Randonnée sur les sentiers balisés",
+        "Pause observation de la faune sauvage"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Reserve du Scamandre + sentiers de Camargue gardoise",
+          "sourceLabel": "Réserve du Scamandre — Cœur de Petite Camargue",
+          "source": "https://coeurdepetitecamargue.fr/"
+        },
+        "activityToDo": {
+          "name": "Reserve du Scamandre + sentiers de Camargue gardoise",
+          "sourceLabel": "Syndicat Mixte Camargue Gardoise",
+          "source": "https://www.camarguegardoise.com/"
+        }
+      },
+      "sources": [
+        [
+          "Réserve du Scamandre — Cœur de Petite Camargue",
+          "https://coeurdepetitecamargue.fr/"
+        ],
+        [
+          "Syndicat Mixte Camargue Gardoise",
+          "https://www.camarguegardoise.com/"
+        ]
+      ],
+      "photoCredit": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Etang_de_Scamandre_en_automne.jpg"
+    },
+    {
+      "id": "grotte-trabuc",
+      "title": "Grotte de Trabuc",
+      "emoji": "",
+      "theme": "theme-cave",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Cascade%20-%20Grotte%20de%20Trabuc%20-%20Gard%20-%20France.JPG?width=900",
+      "imageLabel": "Grotte de Trabuc",
+      "drive": "1h10 a 1h25",
+      "destination": "Mialet",
+      "coords": [
+        44.10796,
+        3.95926
+      ],
+      "badges": [
+        "Grotte fraiche",
+        "Abrite"
+      ],
+      "pitch": "Une expérience spectaculaire pour descendre dans les profondeurs fraîches de la terre.",
+      "subtitle": "Immersion souterraine aux Cévennes.",
+      "budget": "10-20 EUR",
+      "budgetDetail": "Trabuc adulte 21,50 €, 13–18 ans 18,50 €, enfant 15,50 € (2026).",
+      "effort": "Faible",
+      "duration": "1h30 a demi-journee",
+      "availability": "Tous les jours 10h–18h30 (1 mai–5 juil 2026), dernière entrée 17h30 ; billets sur place ou en ligne.",
+      "bestMoment": "13h–16h au frais",
+      "activities": [
+        "Visite de la Grotte de Trabuc",
+        "Découverte des formations géologiques"
+      ],
+      "itinerary": [
+        "Descente dans les galeries de la grotte",
+        "Exploration du site souterrain"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Grotte de Trabuc",
+          "sourceLabel": "Grotte de Trabuc — site officiel",
+          "source": "https://grotte-de-trabuc.com/"
+        },
+        "activityToDo": {
+          "name": "Grotte de Trabuc",
+          "sourceLabel": "Grotte de Trabuc — site officiel",
+          "source": "https://grotte-de-trabuc.com/"
+        }
+      },
+      "sources": [
+        [
+          "Grotte de Trabuc — site officiel",
+          "https://grotte-de-trabuc.com/"
+        ]
+      ],
+      "photoCredit": "Wikimedia Commons: https://commons.wikimedia.org/wiki/File:La_Cascade_-_Grotte_de_Trabuc_-_Gard_-_France.JPG"
+    }
+  ],
+  "schedulePlans": {
+    "saint-guilhem": {
+      "windows": [
+        [
+          10.5,
+          18
+        ]
+      ],
+      "recommended": [
+        [
+          10.5,
+          12.5
+        ]
+      ],
+      "label": "Clamouse 10h30–18h (juin) ; frais sous terre",
+      "suggested": "matin"
+    },
+    "seaquarium": {
+      "windows": [
+        [
+          9.5,
+          19.5
+        ]
+      ],
+      "recommended": [
+        [
+          13,
+          16.5
+        ]
+      ],
+      "label": "Seaquarium 9h30–19h30 ; au frais l'après-midi",
+      "suggested": "13h–16h au frais"
+    },
+    "musee-etang-thau-bouzigues": {
+      "windows": [
+        [
+          10,
+          12
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "recommended": [
+        [
+          10,
+          12
+        ]
+      ],
+      "label": "Musée 10h–12h / 14h–18h ; fermé lundi",
+      "suggested": "matin"
+    },
+    "valmagne": {
+      "windows": [
+        [
+          10,
+          19
+        ]
+      ],
+      "recommended": [
+        [
+          10,
+          12.5
+        ],
+        [
+          16,
+          19
+        ]
+      ],
+      "label": "Abbaye 10h–19h (fermé lundi) ; ombre du parc",
+      "suggested": "matin ou fin d'après-midi"
+    },
+    "planet-ocean-montpellier": {
+      "windows": [
+        [
+          10,
+          19
+        ]
+      ],
+      "recommended": [
+        [
+          13,
+          17
+        ]
+      ],
+      "label": "Planet Ocean 10h–19h (dernier 17h30)",
+      "suggested": "13h–17h au frais"
+    },
+    "chateau-flaugergues": {
+      "windows": [
+        [
+          14,
+          19
+        ]
+      ],
+      "recommended": [
+        [
+          16,
+          19
+        ]
+      ],
+      "label": "Jardins/château 14h–19h (sauf lundi)",
+      "suggested": "fin d'après-midi"
+    },
+    "bois-aresquiers": {
+      "windows": [
+        [
+          8,
+          20
+        ]
+      ],
+      "recommended": [
+        [
+          8.5,
+          11
+        ],
+        [
+          18,
+          20
+        ]
+      ],
+      "label": "Accès libre ; éviter le plein midi, risque incendie",
+      "suggested": "tôt le matin ou en soirée"
+    },
+    "chateau-mogere": {
+      "windows": [
+        [
+          14.5,
+          18.5
+        ]
+      ],
+      "recommended": [
+        [
+          16,
+          18.5
+        ]
+      ],
+      "label": "Jardins 14h30–18h30 (1 juin–30 sept)",
+      "suggested": "fin d'après-midi"
+    },
+    "centre-scamandre": {
+      "windows": [
+        [
+          9,
+          18
+        ]
+      ],
+      "recommended": [
+        [
+          9,
+          11
+        ]
+      ],
+      "label": "Scamandre 9h–18h mar–sam ; FERMÉ dimanche",
+      "suggested": "matin (oiseaux, plus frais)"
+    },
+    "grotte-trabuc": {
+      "windows": [
+        [
+          10,
+          17.5
+        ]
+      ],
+      "recommended": [
+        [
+          13,
+          16.5
+        ]
+      ],
+      "label": "Trabuc 10h–18h30 (dernier 17h30) ; frais sous terre",
+      "suggested": "13h–16h au frais"
+    }
+  },
+  "_source": "bibliotheque",
+  "_review": [
+    "Vérifié web le 2026-06-07 — reconfirmer horaires/tarifs la veille (saison, fériés).",
+    "Scamandre FERMÉ le dimanche -> programmer samedi 13 ; ou remplacer pour le dimanche.",
+    "Bois des Aresquiers : vérifier la carte vigilance incendie Préfecture 34 la veille.",
+    "Saint-Guilhem : réserver le canoë ET la Grotte de Clamouse.",
+    "image réelle à fournir -> saint-guilhem (assets/saint-guilhem.jpg)",
+    "image réelle à fournir -> seaquarium (assets/seaquarium.jpg)",
+    "image réelle à fournir -> musee-etang-thau-bouzigues (assets/musee-etang-thau-bouzigues.jpg)",
+    "image réelle à fournir -> valmagne (assets/valmagne.jpg)",
+    "image réelle à fournir -> planet-ocean-montpellier (assets/planet-ocean-montpellier.jpg)",
+    "image réelle à fournir -> chateau-flaugergues (assets/chateau-flaugergues.jpg)",
+    "image réelle à fournir -> bois-aresquiers (assets/bois-aresquiers.jpg)",
+    "image réelle à fournir -> chateau-mogere (assets/chateau-mogere.jpg)",
+    "image réelle à fournir -> centre-scamandre (assets/centre-scamandre.jpg)",
+    "image réelle à fournir -> grotte-trabuc (assets/grotte-trabuc.jpg)"
+  ],
+  "_verifie_web": "2026-06-07"
+}
