@@ -70,6 +70,26 @@ points à valider avant publication. Ne jamais publier un brouillon sans cette p
 > Politesse Nominatim : 1 requête/seconde max, User-Agent renseigné. Pour un gros
 > volume, héberger son propre Nominatim ou utiliser un fournisseur dédié.
 
+## Réglages & retour d'expérience (tests réels gemma3:12b)
+
+- **Temps de génération** : ~4-5 min pour 10-12 sorties sur RX 6900 XT (16 Go).
+- **Itérer sans repayer le modèle** : le brut est mis en cache dans
+  `data/.raw-<slug>.json`. `--from-raw` rejoue géocodage + post-traitement en
+  quelques secondes (utile pour ajuster `--max-km`, etc.).
+- **Hallucinations de lieux** : un 12B invente des sites obscurs quand `--count`
+  est élevé (testé : ~3 lieux inventés sur 12). Ils sont **toujours attrapés**
+  par le géocodage + le garde-fou distance et listés en `!! EXISTENCE A VERIFIER`.
+  Pour en réduire le nombre : baisser `--count` (8-10), puis compléter à la main.
+- **Garde-fou distance** (`--max-km`, défaut 250) : rejette les homonymes
+  lointains. Exemple réel rattrapé : « Fontaine Audierne » géocodée en Bretagne,
+  « Jardin Smith » à Tahiti.
+- **Ne pas forcer la région** dans le géocodage : le modèle propose souvent des
+  lieux des départements voisins (Gard, Bouches-du-Rhône) ; `commune + France`
+  désambiguïse mieux qu'un hint de région erroné.
+- **Modèle** : `gemma3:12b` fonctionne bien (qualité FR correcte, thèmes variés).
+  `gemma4:12b` (plus récent) exige une **mise à jour d'Ollama** (> 0.24) — sinon
+  erreur 412 au pull. Le script est agnostique : changer juste `--model`.
+
 ## Optimiser les images d'un nouveau lot
 
 ```bash
