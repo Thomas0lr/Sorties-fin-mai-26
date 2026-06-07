@@ -696,7 +696,6 @@
         <span class="count" id="resultCount"></span>
       </div>
 
-      <div class="empty" id="emptyState">Aucune proposition à afficher.</div>
       <div class="cards" id="cards"></div>
     </section>
 
@@ -841,7 +840,7 @@
         title: "S&egrave;te : canaux, mus&eacute;e Paul Val&eacute;ry et Th&eacute;&acirc;tre de la Mer",
         emoji: "",
         theme: "theme-event",
-        image: "assets/sete-musee.png",
+        image: "assets/sete-musee.jpg",
         imageLabel: "Mus&eacute;e Paul Val&eacute;ry &agrave; S&egrave;te",
         drive: "40-50 min",
         destination: "S&egrave;te",
@@ -1300,7 +1299,6 @@
 
     const cards = document.querySelector("#cards");
     const resultCount = document.querySelector("#resultCount");
-    const emptyState = document.querySelector("#emptyState");
 
     function hourLabel(value) {
       const hour = Math.floor(value);
@@ -1359,8 +1357,7 @@
     }
 
     function renderCards() {
-      resultCount.textContent = `${outings.length} / ${outings.length} propositions`;
-      emptyState.classList.toggle("visible", outings.length === 0);
+      resultCount.textContent = `${outings.length} sorties`;
       cards.innerHTML = outings.map(outing => `
         <article class="outing ${outing.theme}" id="${outing.id}">
           <div class="outing-left">
