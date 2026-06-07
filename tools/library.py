@@ -59,6 +59,9 @@ def theme_class(nature: str, tags: set[str]) -> str:
     if tags & {"mer", "lagune", "bassin_thau", "salins", "aquarium", "sete",
                "marais", "petite_camargue"} or nature == "mer":
         return "theme-sea"
+    # eau douce / baignade : nature, meme si un tag patrimoine traine
+    if tags & {"baignade", "riviere", "source", "cascade", "lac"}:
+        return "theme-nature"
     if nature in ("patrimoine", "village", "culture", "marche") or tags & {
         "patrimoine", "archeologie", "chateau", "abbaye", "ville_close",
         "antique", "aqueduc", "village", "grand_site", "capitelles", "moulins",

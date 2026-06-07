@@ -136,11 +136,17 @@ def compose(args) -> dict:
                            max_minutes=args.max_minutes)
     if not cands:
         raise SystemExit(f"Aucun candidat en bibliotheque pour '{args.theme}'.")
+    gap = args.count - len(cands)
     print(f"-> {len(cands)} candidats bibliotheque ; redaction LLM ({args.model})...",
           file=sys.stderr)
     prose = write_prose(args.model, args.theme, cands)
 
     outings, schedule_plans, review = [], {}, []
+    if gap > 0:
+        review.insert(0, f"GAP : la bibliotheque ne fournit que {len(cands)}/{args.count} "
+                         f"sorties pour ce theme. Trouver {gap} idee(s) nouvelle(s) sur le "
+                         f"web, verifier, puis `python tools/library_add.py ...` pour les "
+                         f"ajouter a la bibliotheque, et relancer la composition.")
     origin = list(args.origin_coords)
     for c in cands:
         p = prose.get(c.id, {})

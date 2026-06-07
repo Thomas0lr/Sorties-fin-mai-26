@@ -1,5 +1,35 @@
 # Pipeline de génération des lots (LLM local)
 
+## Source primaire : la bibliothèque privée (recommandé)
+
+Avant de demander quoi que ce soit à un LLM, on pioche dans
+`_bibliotheque_privee/bibliotheque_sorties.csv` (~111 lieux réels, tagués). C'est
+le remède n°1 à l'hallucination : les lieux sont **vrais**, le LLM ne fait plus
+qu'écrire la prose.
+
+| Outil | Rôle |
+|---|---|
+| `tools/library.py` | Charge/filtre/classe le CSV (profils de thème, distance, budget). Lançable seul pour tester un filtre. |
+| `tools/compose_lot.py` | **Compose un lot depuis la biblio** : sélection → rédaction LLM (prose sur faits réels) → géocodage → lot JSON. |
+| `tools/library_add.py` | **Boucle de retour** : ajoute une idée nouvelle (trouvée sur le web, vérifiée) au CSV. |
+
+```bash
+python tools/compose_lot.py --theme "anti-chaleur" --dates "30-31 mai 2026" \
+    --slug soleil --count 10 --model gemma4:12b
+# si _review affiche GAP : recherche web -> library_add.py -> recomposer
+python tools/build.py data/lot-soleil.json index.html
+```
+
+**Privé/public** : `_bibliotheque_privee/` est gitignoré et ne doit JAMAIS être
+publié ; seul le sous-ensemble public des champs part dans le lot.
+
+`generate_lot.py` (ci-dessous, pur LLM) reste un repli pour un thème sans
+couverture biblio — il invente des lieux, donc vérification lourde.
+
+---
+
+# Générateur pur LLM (repli) — generate_lot.py
+
 Architecture **données / présentation séparées** : un lot = un fichier JSON ;
 le HTML final est *construit* à partir d'un template réutilisable. Le HTML produit
 reste **un fichier unique** (s'ouvre au double-clic et marche sur GitHub Pages).
