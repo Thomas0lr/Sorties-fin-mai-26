@@ -146,6 +146,24 @@ def build_prompt(args) -> str:
     )
 
 
+def _ollama_post(path: str, payload: dict, timeout: int) -> dict:
+    req = urllib.request.Request(
+        f"http://localhost:11434{path}",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def model_capabilities(model: str) -> list:
+    try:
+        body = _ollama_post("/api/show", {"model": model}, 30)
+        return body.get("capabilities", [])
+    except Exception:  # noqa: BLE001
+        return []
+
+
 def call_ollama(model: str, prompt: str) -> dict:
     payload = {
         "model": model,
@@ -155,16 +173,33 @@ def call_ollama(model: str, prompt: str) -> dict:
         ],
         "format": OUTING_SCHEMA,
         "stream": False,
-        "options": {"temperature": 0.5},
+        # num_ctx large : sinon la sortie JSON d'un lot complet peut etre tronquee.
+        "options": {"temperature": 0.5, "num_ctx": 16384, "num_predict": 8192},
     }
+    # Modeles "thinking" (ex: gemma4) : sans ceci ils brulent tout le budget de
+    # tokens en raisonnement et renvoient un content vide. On veut le JSON direct.
+    # (Ne pas envoyer 'think' aux modeles non-thinking : ils le rejettent.)
+    if "thinking" in model_capabilities(model):
+        payload["think"] = False
     req = urllib.request.Request(
         OLLAMA_URL,
         data=json.dumps(payload).encode("utf-8"),
         headers={"Content-Type": "application/json"},
     )
-    with urllib.request.urlopen(req, timeout=900) as resp:
+    with urllib.request.urlopen(req, timeout=1200) as resp:
         body = json.loads(resp.read().decode("utf-8"))
-    return json.loads(body["message"]["content"])
+    content = body["message"]["content"]
+    try:
+        return json.loads(content)
+    except json.JSONDecodeError as exc:
+        dbg = ROOT / "data" / f".debug-{model.replace(':', '_')}.txt"
+        dbg.write_text(content, encoding="utf-8")
+        done = body.get("done_reason")
+        raise SystemExit(
+            f"Reponse du modele non parsable ({exc}). done_reason={done!r}. "
+            f"Sortie brute sauvee dans {dbg.name}. "
+            "Si tronquee : baisser --count, ou augmenter num_ctx/num_predict."
+        ) from exc
 
 
 def haversine_km(a: list, b: list) -> float:
@@ -324,8 +359,10 @@ def parse_args(argv):
     p.add_argument("--count", type=int, default=12)
     p.add_argument("--day-start", type=int, default=8)
     p.add_argument("--day-end", type=int, default=20)
-    p.add_argument("--model", default="gemma3:12b",
-                   help="tag Ollama (verifier avec `ollama list`)")
+    p.add_argument("--model", default="gemma4:12b",
+                   help="tag Ollama (verifier avec `ollama list`). gemma4:12b = "
+                        "meilleure prose/diversite ; gemma3:12b = un peu moins "
+                        "d'hallucinations. Les deux exigent la passe de verification.")
     p.add_argument("--brief", type=Path, help="fichier texte ajoute au prompt")
     p.add_argument("--dry-run", action="store_true",
                    help="affiche le prompt sans appeler le modele ni geocoder")

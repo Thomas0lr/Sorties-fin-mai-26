@@ -86,9 +86,26 @@ points à valider avant publication. Ne jamais publier un brouillon sans cette p
 - **Ne pas forcer la région** dans le géocodage : le modèle propose souvent des
   lieux des départements voisins (Gard, Bouches-du-Rhône) ; `commune + France`
   désambiguïse mieux qu'un hint de région erroné.
-- **Modèle** : `gemma3:12b` fonctionne bien (qualité FR correcte, thèmes variés).
-  `gemma4:12b` (plus récent) exige une **mise à jour d'Ollama** (> 0.24) — sinon
-  erreur 412 au pull. Le script est agnostique : changer juste `--model`.
+- **Choix du modèle (testé en A/B, thème anti-chaleur, count 12)** :
+
+  | | gemma3:12b | gemma4:12b (défaut) |
+  |---|---|---|
+  | Temps | ~5 min | **~2 min 45** |
+  | Effectif livré | 11/12 | **12/12** |
+  | Badges/pitchs uniques | 9-10/11 | **12/12** |
+  | Lieux hallucinés | 3 | 4 |
+
+  `gemma4:12b` rédige mieux et plus vite mais **hallucine un peu plus de lieux**
+  (il a inventé une commune « Saint-Aygut »). **Conclusion : aucun 12B ne se
+  suffit à lui-même** — la passe de vérification reste obligatoire. Le défaut est
+  `gemma4:12b` (meilleure prose) ; basculer sur `gemma3:12b` si on préfère un peu
+  moins d'élagage. Le script est agnostique : changer juste `--model`.
+- **Modèles "thinking" (gemma4)** : le script désactive `think` automatiquement
+  (via `/api/show`) — sinon le modèle consomme tout son budget en raisonnement et
+  renvoie un contenu vide. `gemma4:12b` exige **Ollama ≥ 0.30** (sinon 412 au pull).
+- **Troncature JSON** : `num_ctx=16384`, `num_predict=8192`. Si une sortie est
+  quand même tronquée (`done_reason=length`), le brut est sauvé en `data/.debug-*`
+  et il faut baisser `--count`.
 
 ## Optimiser les images d'un nouveau lot
 

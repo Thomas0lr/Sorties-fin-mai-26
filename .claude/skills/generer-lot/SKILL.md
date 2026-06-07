@@ -19,14 +19,15 @@ sources / images → vérification humaine).
 
 ## Étapes
 
-1. **Pré-vol.** Vérifier qu'Ollama répond (`curl -s http://localhost:11434/api/tags`)
-   et qu'un modèle ≤ ~13 Go est disponible (`ollama list`). Défaut : `gemma3:12b`.
-   Le GPU (RX 6900 XT, 16 Go) ne tient pas les modèles > ~14 Go.
+1. **Pré-vol.** Vérifier qu'Ollama (≥ 0.30) répond
+   (`curl -s http://localhost:11434/api/version`) et qu'un modèle ≤ ~13 Go est
+   disponible (`ollama list`). Défaut : `gemma4:12b` (meilleure prose ; `gemma3:12b`
+   en alternative). Le GPU (RX 6900 XT, 16 Go) ne tient pas les modèles > ~14 Go.
 
-2. **Générer le brouillon** (la génération prend ~4-5 min) :
+2. **Générer le brouillon** (~3 min avec gemma4, ~5 min avec gemma3) :
    ```
    python tools/generate_lot.py --theme "<thème>" --dates "<dates>" \
-       --slug <slug> --count 10 --model gemma3:12b
+       --slug <slug> --count 10 --model gemma4:12b
    ```
    - `--count 10` plutôt que 15 : un 12B invente des lieux obscurs quand on lui
      en demande trop. Mieux vaut 10 fiables + en ajouter à la main.

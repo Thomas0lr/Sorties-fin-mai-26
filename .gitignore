@@ -1,5 +1,6 @@
-# Cache brut du générateur LLM (régénérable, peut être volumineux)
+# Cache brut + debug du générateur LLM (régénérables)
 data/.raw-*.json
+data/.debug-*.txt
 
 # Sorties de build temporaires (autres que le lot publié index.html)
 /*.tmp.html
