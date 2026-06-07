@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>__TITLE__</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17201c;
+      --muted: #5a655f;
+      --line: #dce4df;
+      --paper: #fbfcfa;
+      --soft: #eef5f0;
+      --mint: #0b7a6b;
+      --mint-soft: #d9f0e9;
+      --coral: #c84e3f;
+      --coral-soft: #f7ded8;
+      --violet: #5d5abf;
+      --violet-soft: #e8e7fb;
+      --amber: #9d6a17;
+      --amber-soft: #f4ead4;
+      --sky: #166d8f;
+      --sky-soft: #e1f1f6;
+      --leaf: #277446;
+      --leaf-soft: #e2f2e7;
+      --theme: var(--mint);
+      --theme-deep: #075f54;
+      --theme-soft: var(--mint-soft);
+      --theme-line: rgba(11, 122, 107, 0.2);
+      --shadow: 0 18px 50px rgba(31, 43, 35, 0.13);
+      --radius: 8px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f8fbf8 0%, #ffffff 48%, #f3f8f6 100%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    main {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 30px 0 38px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    .simple-title {
+      margin: 0 0 22px;
+      padding-top: 4px;
+      text-align: center;
+    }
+
+    .simple-title h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(2.05rem, 5vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .simple-title p {
+      max-width: 760px;
+      margin: 12px auto 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .section-title {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 16px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.2;
+    }
+
+    .section-title p {
+      max-width: 790px;
+      margin: 8px 0 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    .cards {
+      display: grid;
+      gap: 20px;
+    }
+
+    .outing {
+      --theme: var(--mint);
+      --theme-deep: #075f54;
+      --theme-soft: var(--mint-soft);
+      --theme-line: rgba(11, 122, 107, 0.2);
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      overflow: hidden;
+      border: 1px solid var(--theme-line);
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .outing.theme-sea {
+      --theme: var(--sky);
+      --theme-deep: #0f5873;
+      --theme-soft: var(--sky-soft);
+      --theme-line: rgba(22, 109, 143, 0.22);
+    }
+
+    .outing.theme-nature {
+      --theme: var(--leaf);
+      --theme-deep: #1d5f38;
+      --theme-soft: var(--leaf-soft);
+      --theme-line: rgba(39, 116, 70, 0.22);
+    }
+
+    .outing.theme-event {
+      --theme: var(--coral);
+      --theme-deep: #a53e31;
+      --theme-soft: var(--coral-soft);
+      --theme-line: rgba(200, 78, 63, 0.22);
+    }
+
+    .outing.theme-culture {
+      --theme: var(--violet);
+      --theme-deep: #4542a4;
+      --theme-soft: var(--violet-soft);
+      --theme-line: rgba(93, 90, 191, 0.22);
+    }
+
+    .outing.theme-wine {
+      --theme: var(--amber);
+      --theme-deep: #74500f;
+      --theme-soft: var(--amber-soft);
+      --theme-line: rgba(157, 106, 23, 0.22);
+    }
+
+    .outing-left {
+      display: grid;
+      grid-template-rows: minmax(300px, auto) auto;
+      min-width: 0;
+      background: linear-gradient(180deg, var(--theme-soft), #fff);
+    }
+
+    .outing-media {
+      position: relative;
+      min-height: 300px;
+      overflow: hidden;
+      background: var(--theme-soft);
+    }
+
+    .outing-media img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.96) contrast(1.02);
+    }
+
+    .outing-media img.failed {
+      opacity: 0;
+    }
+
+    .photo-fallback {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: var(--theme-deep);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.24)),
+        var(--theme-soft);
+      text-align: center;
+      font-weight: 850;
+      line-height: 1.35;
+    }
+
+    .outing-media::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 42%;
+      background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.45));
+      pointer-events: none;
+    }
+
+    .rank,
+    .photo-label {
+      position: absolute;
+      z-index: 1;
+      border-radius: var(--radius);
+      color: white;
+      font-weight: 850;
+    }
+
+    .rank {
+      top: 14px;
+      left: 14px;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      background: rgba(18, 31, 27, 0.86);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    .photo-label {
+      right: 14px;
+      bottom: 14px;
+      max-width: min(260px, calc(100% - 28px));
+      padding: 8px 10px;
+      background: rgba(18, 31, 27, 0.72);
+      font-size: 0.78rem;
+      line-height: 1.25;
+    }
+
+    .route-card {
+      display: grid;
+      gap: 10px;
+      padding: 14px 0;
+      border-top: 1px solid var(--theme-line);
+      background: var(--theme-soft);
+    }
+
+    .route-card h4 {
+      margin: 0;
+      padding: 0 14px;
+      color: var(--theme-deep);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .route-map {
+      position: relative;
+      height: 230px;
+      overflow: hidden;
+      border-top: 1px solid var(--theme-line);
+      border-bottom: 1px solid var(--theme-line);
+      background: #eaf1ef;
+    }
+
+    .route-fallback {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: 12px;
+      padding: 15px;
+      color: #315063;
+      text-align: center;
+      font-weight: 800;
+      line-height: 1.28;
+    }
+
+    .route-map.loaded .route-fallback {
+      display: none;
+    }
+
+    .route-point {
+      justify-self: center;
+      max-width: 120px;
+      padding: 7px 9px;
+      border: 1px solid rgba(49, 80, 99, 0.18);
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: 0 8px 22px rgba(49, 80, 99, 0.12);
+      font-size: 0.76rem;
+    }
+
+    .route-point::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 0 auto 4px;
+      border-radius: 50%;
+      background: var(--theme);
+    }
+
+    .route-start::before {
+      background: var(--ink);
+    }
+
+    .route-note {
+      grid-column: 1 / -1;
+      justify-self: center;
+      padding: 6px 9px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.84);
+      color: var(--theme-deep);
+      font-size: 0.76rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .route-caption {
+      margin: 0;
+      padding: 0 14px;
+      color: #2f433d;
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+
+    .leaflet-container {
+      font: inherit;
+    }
+
+    .leaflet-tile {
+      filter: saturate(0.78) contrast(0.92) brightness(1.05);
+    }
+
+    .leaflet-control-attribution {
+      font-size: 9px;
+    }
+
+    .outing-body {
+      display: grid;
+      gap: 16px;
+      min-width: 0;
+      padding: 24px 18px 22px;
+    }
+
+    .outing-head {
+      display: grid;
+      gap: 10px;
+    }
+
+    .title-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .outing-emoji {
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--theme-line);
+      border-radius: var(--radius);
+      background: var(--theme-soft);
+      font-size: 1.28rem;
+    }
+
+    .outing h3 {
+      margin: 0;
+      color: #071611;
+      font-size: clamp(1.45rem, 2.4vw, 2rem);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .pitch {
+      padding-left: 12px;
+      border-left: 3px solid var(--theme);
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 6px 10px;
+      border: 1px solid var(--theme-line);
+      border-radius: 8px;
+      background: var(--theme-soft);
+      color: var(--theme-deep);
+      font-size: 0.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .decision {
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid var(--theme-line);
+      border-radius: var(--radius);
+      background: #fbfdfb;
+    }
+
+    .decision h4,
+    .block h4 {
+      margin: 0 0 8px;
+      color: var(--theme-deep);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .decision p {
+      margin: 0;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .decision small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .per-person {
+      display: block;
+      color: var(--theme-deep);
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    .availability-decision {
+      grid-column: 1 / -1;
+    }
+
+    .time-card {
+      display: grid;
+      gap: 7px;
+    }
+
+    .time-axis {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      color: var(--muted);
+      font-size: 0.72rem;
+      line-height: 1;
+    }
+
+    .time-axis span {
+      white-space: nowrap;
+    }
+
+    .time-bar {
+      position: relative;
+      min-height: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(22, 33, 28, 0.08);
+      border-radius: 999px;
+      background: #eef1ee;
+    }
+
+    .time-segment {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--start);
+      width: var(--width);
+      min-width: 2px;
+      background: var(--theme-soft);
+      background: color-mix(in srgb, var(--theme-soft) 76%, var(--theme) 24%);
+      border-left: 1px solid color-mix(in srgb, var(--theme-line) 62%, var(--theme) 38%);
+      border-right: 1px solid color-mix(in srgb, var(--theme-line) 62%, var(--theme) 38%);
+    }
+
+    .time-segment.recommended {
+      background: var(--theme);
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    }
+
+    .time-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .time-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .time-legend i {
+      width: 18px;
+      height: 8px;
+      flex: 0 0 auto;
+      border: 1px solid color-mix(in srgb, var(--theme-line) 62%, var(--theme) 38%);
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--theme-soft) 76%, var(--theme) 24%);
+    }
+
+    .time-legend .activity i {
+      background: var(--theme);
+    }
+
+    .time-note {
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.42;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 18px;
+      padding-top: 2px;
+    }
+
+    .block {
+      min-width: 0;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .block ul,
+    .block ol {
+      margin: 0;
+      padding-left: 18px;
+      line-height: 1.55;
+    }
+
+    .sources-block {
+      grid-column: 1 / -1;
+    }
+
+    .sources-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      line-height: 1.35;
+    }
+
+    .sources-list li {
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .sources-list a {
+      color: var(--theme-deep);
+      overflow-wrap: anywhere;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .private-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .private-note strong {
+      color: var(--ink);
+    }
+
+    .empty {
+      display: none;
+      padding: 24px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .empty.visible {
+      display: block;
+    }
+
+    @media (max-width: 980px) {
+      .outing {
+        grid-template-columns: 1fr;
+      }
+
+      .outing-left {
+        grid-template-rows: auto auto;
+      }
+
+      .outing-media img {
+        height: 270px;
+        min-height: 270px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      main {
+        width: min(100% - 28px, 1160px);
+        padding-top: 22px;
+      }
+
+      .section-title {
+        grid-template-columns: 1fr;
+      }
+
+      .count {
+        white-space: normal;
+      }
+
+      .decision-grid,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .outing-body {
+        padding: 18px;
+      }
+
+      .title-line {
+        gap: 8px;
+      }
+
+      .outing-emoji {
+        width: 36px;
+        height: 36px;
+        font-size: 1.08rem;
+      }
+
+      .route-map {
+        height: 190px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="simple-title" aria-label="Titre du lot">
+      <h1>__HEADING__</h1>
+      <p>__INTRO__</p>
+    </section>
+
+    <section id="propositions" aria-labelledby="propositions-title">
+      <div class="section-title">
+        <div>
+          <h2 id="propositions-title">__SECTION_TITLE__</h2>
+          <p>__SECTION_INTRO__</p>
+        </div>
+        <span class="count" id="resultCount"></span>
+      </div>
+
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section class="private-note" aria-label="Note de publication">
+      <p>__NOTE__</p>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const LOT = /*__LOT_JSON__*/ {};
+    const montpellier = LOT.meta.origin;
+    const dayStart = LOT.meta.dayStart;
+    const dayEnd = LOT.meta.dayEnd;
+
+    const outings = LOT.outings;
+    outings.forEach((outing, index) => { outing.rank = index + 1; });
+
+    const schedulePlans = LOT.schedulePlans;
+
+    const cards = document.querySelector("#cards");
+    const resultCount = document.querySelector("#resultCount");
+
+    function hourLabel(value) {
+      const hour = Math.floor(value);
+      const minutes = Math.round((value - hour) * 60);
+      return minutes ? `${hour}h${String(minutes).padStart(2, "0")}` : `${hour}h`;
+    }
+
+    function timePercent(value) {
+      return Math.max(0, Math.min(100, ((value - dayStart) / (dayEnd - dayStart)) * 100));
+    }
+
+    function segmentHtml(range, className = "") {
+      const start = timePercent(range[0]);
+      const end = timePercent(range[1]);
+      const width = Math.max(1, end - start);
+      return `<span class="time-segment ${className}" style="--start:${start}%;--width:${width}%"></span>`;
+    }
+
+    function timeAxisHtml() {
+      return `<div class="time-axis">${[8, 10, 12, 14, 16, 18, 20].map(hour => `<span>${hour}h</span>`).join("")}</div>`;
+    }
+
+    function timeLegendHtml() {
+      return `
+        <div class="time-legend" aria-label="Légende de la barre horaire">
+          <span><i aria-hidden="true"></i>Horaire officiel</span>
+          <span class="activity"><i aria-hidden="true"></i>Moment conseillé</span>
+        </div>
+      `;
+    }
+
+    function timeBarHtml(schedule) {
+      return `
+        ${timeAxisHtml()}
+        <div class="time-bar" aria-label="Horaire officiel en clair, moment conseillé en couleur marquée">
+          ${schedule.windows.map(range => segmentHtml(range)).join("")}
+          ${schedule.recommended.map(range => segmentHtml(range, "recommended")).join("")}
+        </div>
+        ${timeLegendHtml()}
+      `;
+    }
+
+    function availabilitySummary(outing) {
+      const schedule = schedulePlans[outing.id] || {
+        windows: [[dayStart, dayEnd]],
+        recommended: [],
+        label: outing.availability,
+        suggested: outing.bestMoment
+      };
+      return `
+        <div class="time-card">
+          ${timeBarHtml(schedule)}
+          <span class="time-note"><strong>À viser :</strong> ${schedule.suggested} · ${schedule.label}.</span>
+        </div>
+      `;
+    }
+
+    function renderCards() {
+      resultCount.textContent = `${outings.length} sorties`;
+      cards.innerHTML = outings.map(outing => `
+        <article class="outing ${outing.theme}" id="${outing.id}">
+          <div class="outing-left">
+            <div class="outing-media">
+              <img src="${outing.image}" alt="${outing.imageLabel}" loading="lazy" onerror="this.classList.add('failed')">
+              <div class="photo-fallback" aria-hidden="true"><strong>${outing.imageLabel}</strong></div>
+              <span class="rank">${outing.rank}</span>
+              <span class="photo-label">${outing.imageLabel}</span>
+            </div>
+            <div class="route-card">
+              <h4>Trajet voiture</h4>
+              <div class="route-map" data-route-id="${outing.id}" aria-label="Aperçu du trajet voiture depuis Montpellier vers ${outing.destination}">
+                <div class="route-fallback" aria-hidden="true">
+                  <span class="route-point route-start">Montpellier</span>
+                  <span class="route-point route-end">${outing.destination}</span>
+                  <span class="route-note">${outing.drive} · voiture</span>
+                </div>
+              </div>
+              <p class="route-caption"><strong>Montpellier → ${outing.destination}</strong> : ${outing.drive} environ en voiture.</p>
+            </div>
+          </div>
+          <div class="outing-body">
+            <div class="outing-head">
+              <div class="title-line">
+                ${outing.emoji ? `<span class="outing-emoji" aria-hidden="true">${outing.emoji}</span>` : ""}
+                <h3>${outing.title}</h3>
+              </div>
+              <p class="pitch">${outing.pitch}</p>
+              <p class="subtitle">${outing.subtitle}</p>
+              <div class="badges">${outing.badges.map(badge => `<span class="pill">${badge}</span>`).join("")}</div>
+            </div>
+            <div class="decision-grid">
+              <div class="decision">
+                <h4>Trajet</h4>
+                <p>Montpellier → ${outing.destination}<span class="per-person">${outing.drive}</span></p>
+              </div>
+              <div class="decision">
+                <h4>Budget</h4>
+                <p>${outing.budget}<span class="per-person">par personne</span></p>
+                <small>${outing.budgetDetail}</small>
+              </div>
+              <div class="decision">
+                <h4>Effort</h4>
+                <p>${outing.effort}</p>
+                <small>${outing.duration}</small>
+              </div>
+              <div class="decision availability-decision">
+                <h4>Dates / horaires</h4>
+                ${availabilitySummary(outing)}
+              </div>
+            </div>
+            <div class="info-grid">
+              <div class="block">
+                <h4>Activités sur place</h4>
+                <ul>${outing.activities.map(activity => `<li>${activity}</li>`).join("")}</ul>
+              </div>
+              <div class="block">
+                <h4>Itinéraire simple</h4>
+                <ol>${outing.itinerary.map(step => `<li>${step}</li>`).join("")}</ol>
+              </div>
+              <div class="block sources-block">
+                <h4>Sources</h4>
+                <ul class="sources-list">${outing.sources.map(source => `<li><a href="${source[1]}" target="_blank" rel="noopener">${source[0]}</a></li>`).join("")}</ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      `).join("");
+      initMaps();
+    }
+
+    function initMaps() {
+      if (!window.L) return;
+      document.querySelectorAll(".route-map").forEach(node => {
+        const outing = outings.find(item => item.id === node.dataset.routeId);
+        if (!outing) return;
+        const routeTheme = getComputedStyle(node.closest(".outing")).getPropertyValue("--theme").trim();
+        const line = [montpellier, outing.coords];
+        const bounds = L.latLngBounds(line);
+        const fitRoute = () => {
+          const standardMinZoom = 10;
+          map.invalidateSize();
+          const fittedZoom = map.getBoundsZoom(bounds, false, [30, 30]);
+          map.fitBounds(bounds, { padding: [30, 30], maxZoom: 11 });
+          if (map.getZoom() < standardMinZoom && fittedZoom >= standardMinZoom) {
+            map.setView(bounds.getCenter(), standardMinZoom, { animate: false });
+          }
+        };
+        const map = L.map(node, {
+          zoomControl: false,
+          dragging: false,
+          scrollWheelZoom: false,
+          doubleClickZoom: false,
+          boxZoom: false,
+          keyboard: false,
+          attributionControl: true,
+          zoomSnap: 0.25,
+          zoomDelta: 0.25
+        });
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 18,
+          attribution: "&copy; OpenStreetMap"
+        }).addTo(map);
+        L.polyline(line, { color: "#ffffff", weight: 9, opacity: 0.95, lineCap: "round", lineJoin: "round" }).addTo(map);
+        L.polyline(line, { color: routeTheme, weight: 5, opacity: 1, lineCap: "round", lineJoin: "round" }).addTo(map);
+        L.circleMarker(montpellier, { radius: 6, color: "#17201c", fillColor: "#17201c", fillOpacity: 0.9 }).addTo(map).bindTooltip("Montpellier", { permanent: true, direction: "top", offset: [0, -8] });
+        L.circleMarker(outing.coords, { radius: 6, color: "#17201c", fillColor: routeTheme, fillOpacity: 0.95 }).addTo(map).bindTooltip(outing.destination, { permanent: true, direction: "top", offset: [0, -8] });
+        fitRoute();
+        node.classList.add("loaded");
+        setTimeout(fitRoute, 50);
+      });
+    }
+
+    renderCards();
+  </script>
+</body>
+</html>

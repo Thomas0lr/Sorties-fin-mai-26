@@ -1,0 +1,1242 @@
+{
+  "meta": {
+    "slug": "soleil-doux",
+    "title": "Lot 15 soleil doux - 30 et 31 mai 2026",
+    "heading": "Lot soleil doux 30-31 mai 2026",
+    "intro": "Version publiée. Pour 2-3 personnes au départ de Montpellier, avec eau, ombre ou repli intérieur pour profiter du week-end sans subir la chaleur.",
+    "sectionTitle": "Les 15 sorties à choisir",
+    "sectionIntro": "Chaque fiche combine au moins un lieu à visiter et une activité à faire, avec budget par personne, sources, trajet depuis Montpellier et barre horaire standardisée.",
+    "note": "<strong>Ordre conseillé :</strong> les trois meilleurs choix anti-chaleur passent en tête : Clamouse, Grotte des Demoiselles puis Seaquarium. Ensuite, garder les options eau/ombre selon l'envie : Bouzigues, Valmagne, Frontignan, Aigues-Mortes ou Balaruc.",
+    "origin": [
+      43.6108,
+      3.8767
+    ],
+    "originLabel": "Montpellier",
+    "dayStart": 8,
+    "dayEnd": 20
+  },
+  "outings": [
+    {
+      "id": "clamouse-saint-guilhem",
+      "title": "Clamouse : grotte fra&icirc;che + Saint-Guilhem ou Pont du Diable",
+      "emoji": "",
+      "theme": "theme-culture",
+      "image": "assets/clamouse-couloir.jpg",
+      "imageLabel": "Grotte de Clamouse",
+      "drive": "45-55 min",
+      "destination": "Grotte de Clamouse",
+      "coords": [
+        43.708,
+        3.551
+      ],
+      "badges": [
+        "30-31 mai",
+        "15 &deg;C",
+        "R&eacute;servation conseill&eacute;e"
+      ],
+      "pitch": "Le meilleur vrai repli fra&icirc;cheur : la grotte est &agrave; 15 &deg;C, puis vous gardez le soleil pour le village ou l'H&eacute;rault.",
+      "subtitle": "Id&eacute;al si la chaleur devient p&eacute;nible, avec une visite cadr&eacute;e et une option eau au Pont du Diable.",
+      "budget": "13,50-25 &euro;",
+      "budgetDetail": "Visite guid&eacute;e en ligne &agrave; partir de 13,50 &euro; ; pause ou parking en sus.",
+      "effort": "Faible &agrave; mod&eacute;r&eacute;",
+      "duration": "Demi-journ&eacute;e &agrave; journ&eacute;e",
+      "availability": "D&eacute;parts avril-mai-juin de 10h30 &agrave; 16h ; visite 1h30",
+      "bestMoment": "10h30 ou 15h30",
+      "activities": [
+        "Visite guid&eacute;e de la grotte",
+        "Balade courte &agrave; Saint-Guilhem-le-D&eacute;sert",
+        "Pause au Pont du Diable selon fr&eacute;quentation"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Grotte de Clamouse",
+          "sourceLabel": "Visite guidee Clamouse",
+          "source": "https://www.clamouse.com/fr/activites/visite-guidee/"
+        },
+        "activityToDo": {
+          "name": "Parcours guide souterrain a 15 degres",
+          "sourceLabel": "Horaires Clamouse",
+          "source": "https://www.clamouse.com/fr/infos-pratiques/horaires/"
+        }
+      },
+      "itinerary": [
+        "R&eacute;server un d&eacute;part de visite.",
+        "Faire la grotte au frais.",
+        "Passer &agrave; Saint-Guilhem pour le lieu &agrave; visiter.",
+        "Garder le Pont du Diable pour une pause courte, pas pour une longue exposition."
+      ],
+      "sources": [
+        [
+          "Visite guid&eacute;e Clamouse",
+          "https://www.clamouse.com/fr/activites/visite-guidee/"
+        ],
+        [
+          "Horaires Clamouse",
+          "https://www.clamouse.com/fr/infos-pratiques/horaires/"
+        ]
+      ]
+    },
+    {
+      "id": "grotte-demoiselles-herault",
+      "title": "Grotte des Demoiselles : cath&eacute;drale souterraine + H&eacute;rault",
+      "emoji": "",
+      "theme": "theme-culture",
+      "image": "assets/grotte-demoiselles.jpg",
+      "imageLabel": "Grotte des Demoiselles",
+      "drive": "45-55 min",
+      "destination": "Saint-Bauzille-de-Putois",
+      "coords": [
+        43.894,
+        3.735
+      ],
+      "badges": [
+        "30-31 mai",
+        "Int&eacute;rieur frais",
+        "H&eacute;rault proche"
+      ],
+      "pitch": "Un vrai repli fra&icirc;cheur avec une visite forte, puis une pause au bord de l'H&eacute;rault si la lumi&egrave;re devient plus douce.",
+      "subtitle": "C'est l'alternative la plus nette &agrave; Clamouse : abrit&eacute;, spectaculaire, et simple &agrave; caler sur une demi-journ&eacute;e.",
+      "budget": "16-28 &euro;",
+      "budgetDetail": "Visite adulte 16 &euro; ; pr&eacute;voir pause, parking ou verre ensuite.",
+      "effort": "Faible &agrave; mod&eacute;r&eacute;",
+      "duration": "Demi-journ&eacute;e",
+      "availability": "Ouvert 7j/7, 9h-18h ; dernier d&eacute;part 16h30",
+      "bestMoment": "13h-16h au frais",
+      "activities": [
+        "Visite guid&eacute;e de la grotte et funiculaire souterrain",
+        "Pause courte vers l'H&eacute;rault ou Saint-Bauzille",
+        "Option caf&eacute; ou belv&eacute;d&egrave;re selon l'&eacute;nergie"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Grotte des Demoiselles",
+          "sourceLabel": "Grotte des Demoiselles",
+          "source": "https://www.demoiselles.com/fr"
+        },
+        "activityToDo": {
+          "name": "Visite guidee souterraine avec funiculaire",
+          "sourceLabel": "Tarifs Grotte des Demoiselles",
+          "source": "https://www.demoiselles.com/fr/tarifs"
+        }
+      },
+      "itinerary": [
+        "Partir apr&egrave;s le d&eacute;jeuner ou en fin de matin&eacute;e.",
+        "Faire la visite au moment le plus chaud.",
+        "Ajouter une pause courte au bord de l'H&eacute;rault.",
+        "Rentrer sans marche longue expos&eacute;e."
+      ],
+      "sources": [
+        [
+          "Grotte des Demoiselles",
+          "https://www.demoiselles.com/fr"
+        ],
+        [
+          "Tarifs",
+          "https://www.demoiselles.com/fr/tarifs"
+        ],
+        [
+          "Venir &agrave; la grotte",
+          "https://www.demoiselles.com/fr/venir-a-la-grotte"
+        ]
+      ]
+    },
+    {
+      "id": "seaquarium-grau-roi",
+      "title": "Grau-du-Roi : Seaquarium + bord de mer",
+      "emoji": "",
+      "theme": "theme-sea",
+      "image": "assets/seaquarium.jpg",
+      "imageLabel": "Seaquarium du Grau-du-Roi",
+      "drive": "40-50 min",
+      "destination": "Seaquarium / Grau-du-Roi",
+      "coords": [
+        43.52725,
+        4.14099
+      ],
+      "badges": [
+        "30-31 mai",
+        "Int&eacute;rieur",
+        "Mer juste apr&egrave;s"
+      ],
+      "pitch": "Le repli int&eacute;rieur le plus simple si le soleil tape : aquarium, tortues, requins, puis bord de mer en sortie.",
+      "subtitle": "Tr&egrave;s bien pour 2-3 personnes qui veulent de l'eau sans rester allong&eacute;es en plein soleil.",
+      "budget": "17-35 &euro;",
+      "budgetDetail": "Entr&eacute;e adulte 17 &euro; ; repas, glace ou stationnement en sus.",
+      "effort": "Faible",
+      "duration": "2h &agrave; demi-journ&eacute;e",
+      "availability": "Avril-mai-juin 9h30-19h30 ; caisses ferm&eacute;es 1h avant",
+      "bestMoment": "13h-16h au frais",
+      "activities": [
+        "Visite du Seaquarium",
+        "Balade courte au port ou en front de mer",
+        "Pause plage tardive si le soleil baisse"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Front de mer et port du Grau-du-Roi",
+          "sourceLabel": "Office de tourisme Le Grau-du-Roi",
+          "source": "https://letsgrau.com/que-faire/toutes-les-activites/le-seaquarium/"
+        },
+        "activityToDo": {
+          "name": "Visite du Seaquarium",
+          "sourceLabel": "Seaquarium infos pratiques",
+          "source": "https://www.seaquarium.fr/fr/infos-pratiques/"
+        }
+      },
+      "itinerary": [
+        "Arriver sur la tranche chaude pour visiter dedans.",
+        "Compter environ 2h de visite.",
+        "Sortir vers le port ou la plage quand la lumi&egrave;re baisse.",
+        "Rentrer avant la circulation de fin de journ&eacute;e si besoin."
+      ],
+      "sources": [
+        [
+          "Seaquarium infos pratiques",
+          "https://www.seaquarium.fr/fr/infos-pratiques/"
+        ],
+        [
+          "Office de tourisme Le Grau-du-Roi",
+          "https://letsgrau.com/que-faire/toutes-les-activites/le-seaquarium/"
+        ]
+      ]
+    },
+    {
+      "id": "bouzigues-thau",
+      "title": "Bouzigues : bateau, hu&icirc;tres et mus&eacute;e de l'&eacute;tang",
+      "emoji": "",
+      "theme": "theme-sea",
+      "image": "assets/bouzigues-bateau.jpg",
+      "imageLabel": "Bateau sur l'&eacute;tang de Thau",
+      "drive": "35-45 min",
+      "destination": "Bouzigues",
+      "coords": [
+        43.448,
+        3.657
+      ],
+      "badges": [
+        "30-31 mai",
+        "Bateau 1h",
+        "Int&eacute;rieur possible"
+      ],
+      "pitch": "Le meilleur mix eau + contenu : bateau sur l'&eacute;tang, mus&eacute;e abrit&eacute;, port et d&eacute;gustation possible.",
+      "subtitle": "Tr&egrave;s bon choix si vous voulez du soleil sans rester immobiles dehors pendant des heures.",
+      "budget": "19-35 &euro;",
+      "budgetDetail": "Bateau 14 &euro; + mus&eacute;e 5 &euro; ; d&eacute;gustation ou repas en sus.",
+      "effort": "Faible",
+      "duration": "Demi-journ&eacute;e &agrave; journ&eacute;e douce",
+      "availability": "Bateau 11h, 14h30, 16h ; mus&eacute;e 10h-12h / 14h-18h",
+      "bestMoment": "11h ou 14h30",
+      "activities": [
+        "Bateau vers les parcs &agrave; hu&icirc;tres",
+        "Visite du mus&eacute;e de l'&Eacute;tang de Thau",
+        "Port, terrasse ou d&eacute;gustation"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Musee de l'Etang de Thau a Bouzigues",
+          "sourceLabel": "Musee de l'Etang de Thau",
+          "source": "https://www.archipel-thau.com/musee-de-l-etang-de-thau-1.html"
+        },
+        "activityToDo": {
+          "name": "Sortie bateau vers les parcs a huitres",
+          "sourceLabel": "Bateau Bleu Marin",
+          "source": "https://www.archipel-thau.com/visite-en-bateau-des-parcs-a-huitres-avec-bleu-marin-depuis-bouzigues.html"
+        }
+      },
+      "itinerary": [
+        "R&eacute;server le bateau avant de partir.",
+        "Faire bateau ou mus&eacute;e selon le cr&eacute;neau.",
+        "Pause sur le port de Bouzigues.",
+        "Finir &agrave; M&egrave;ze ou Balaruc si vous voulez prolonger."
+      ],
+      "sources": [
+        [
+          "Bateau Bleu Marin",
+          "https://www.archipel-thau.com/visite-en-bateau-des-parcs-a-huitres-avec-bleu-marin-depuis-bouzigues.html"
+        ],
+        [
+          "Mus&eacute;e de l'&Eacute;tang de Thau",
+          "https://www.archipel-thau.com/musee-de-l-etang-de-thau-1.html"
+        ]
+      ]
+    },
+    {
+      "id": "valmagne-meze",
+      "title": "Valmagne : march&eacute; de printemps + abbaye + M&egrave;ze",
+      "emoji": "",
+      "theme": "theme-wine",
+      "image": "assets/valmagne-printemps.jpg",
+      "imageLabel": "March&eacute; de printemps &agrave; Valmagne",
+      "drive": "45-55 min",
+      "destination": "Abbaye de Valmagne",
+      "coords": [
+        43.499,
+        3.563
+      ],
+      "badges": [
+        "30-31 mai",
+        "Abbaye",
+        "&Eacute;tang en fin de journ&eacute;e"
+      ],
+      "pitch": "Un beau lieu &agrave; visiter, un march&eacute; dat&eacute; et une fin de journ&eacute;e facile vers M&egrave;ze ou Bouzigues.",
+      "subtitle": "C'est l'option patrimoine + ombre partielle, avec l'eau en deuxi&egrave;me temps.",
+      "budget": "8-35 &euro;",
+      "budgetDetail": "March&eacute; ou visite selon formule ; repas, caveau ou pause en sus.",
+      "effort": "Faible",
+      "duration": "Journ&eacute;e douce",
+      "availability": "March&eacute; de printemps samedi 30 et dimanche 31, 10h-19h",
+      "bestMoment": "10h-13h ou 16h-19h",
+      "activities": [
+        "Visite de l'abbaye et des jardins",
+        "March&eacute; de printemps",
+        "M&egrave;ze ou Bouzigues pour finir pr&egrave;s de l'eau"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Abbaye de Valmagne",
+          "sourceLabel": "Visite de l'abbaye",
+          "source": "https://www.valmagne.com/evenement/visite-abbaye/"
+        },
+        "activityToDo": {
+          "name": "Marche de printemps de Valmagne",
+          "sourceLabel": "Marche de printemps",
+          "source": "https://www.valmagne.com/evenement/marche-de-printemps/2026-05-31/"
+        }
+      },
+      "itinerary": [
+        "Partir en fin de matin&eacute;e ou milieu d'apr&egrave;s-midi.",
+        "Faire march&eacute;, abbaye et caveau sans se presser.",
+        "&Eacute;viter la marche longue en plein apr&egrave;s-midi.",
+        "Redescendre vers M&egrave;ze si besoin d'air marin."
+      ],
+      "sources": [
+        [
+          "March&eacute; de printemps",
+          "https://www.valmagne.com/evenement/marche-de-printemps/2026-05-31/"
+        ],
+        [
+          "Visite de l'abbaye",
+          "https://www.valmagne.com/evenement/visite-abbaye/"
+        ]
+      ]
+    },
+    {
+      "id": "frontignan-canal-aresquiers",
+      "title": "Frontignan : Canal en f&ecirc;te + Aresquiers",
+      "emoji": "",
+      "theme": "theme-nature",
+      "image": "assets/frontignan-canal.jpg",
+      "imageLabel": "Balade Canal en f&ecirc;te",
+      "drive": "25-35 min",
+      "destination": "Frontignan / Aresquiers",
+      "coords": [
+        43.44595,
+        3.76002
+      ],
+      "badges": [
+        "Samedi 30",
+        "Gratuit sur inscription",
+        "Lagune + plage"
+      ],
+      "pitch": "La meilleure ouverture du week-end : une balade guid&eacute;e nature le matin, puis eau et ombre c&ocirc;t&eacute; Aresquiers.",
+      "subtitle": "C'est dat&eacute;, gratuit, proche, et parfait pour &eacute;viter les heures qui tapent fort.",
+      "budget": "0-15 &euro;",
+      "budgetDetail": "Balade gratuite ; pr&eacute;voir pause, parking ou encas.",
+      "effort": "Faible &agrave; mod&eacute;r&eacute;",
+      "duration": "Matin&eacute;e + prolongement souple",
+      "availability": "Samedi 30 mai, accueil 9h, d&eacute;part 9h30, balade 9h-12h",
+      "bestMoment": "samedi matin",
+      "activities": [
+        "Visite guid&eacute;e canal, salins et lagune",
+        "Observation oiseaux et zones humides",
+        "Bois ou plage des Aresquiers ensuite"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Canal des etangs et salins de Frontignan",
+          "sourceLabel": "Canal en fete - Archipel de Thau",
+          "source": "https://www.archipel-thau.com/le-canal-en-fete-balade-du-canal-aux-salins.html"
+        },
+        "activityToDo": {
+          "name": "Balade guidee Canal en fete vers les salins",
+          "sourceLabel": "Canal en fete - Archipel de Thau",
+          "source": "https://www.archipel-thau.com/le-canal-en-fete-balade-du-canal-aux-salins.html"
+        }
+      },
+      "itinerary": [
+        "D&eacute;part de Montpellier vers 8h30.",
+        "Balade Canal en f&ecirc;te de 9h &agrave; 12h.",
+        "D&eacute;jeuner l&eacute;ger ou retour par Frontignan.",
+        "Aresquiers seulement si vent et soleil restent supportables."
+      ],
+      "sources": [
+        [
+          "Canal en f&ecirc;te - Archipel de Thau",
+          "https://www.archipel-thau.com/le-canal-en-fete-balade-du-canal-aux-salins.html"
+        ]
+      ]
+    },
+    {
+      "id": "aigues-mortes-croisiere",
+      "title": "Aigues-Mortes : remparts + croisi&egrave;re sur le canal",
+      "emoji": "",
+      "theme": "theme-sea",
+      "image": "assets/aigues-mortes.jpg",
+      "imageLabel": "Tours et remparts d'Aigues-Mortes",
+      "drive": "35-45 min",
+      "destination": "Aigues-Mortes",
+      "coords": [
+        43.566,
+        4.191
+      ],
+      "badges": [
+        "30-31 mai",
+        "Canal",
+        "Patrimoine"
+      ],
+      "pitch": "Un duo lisible : remparts t&ocirc;t, puis bateau sur le canal pour garder l'air et l'eau dans le programme.",
+      "subtitle": "Les remparts sont expos&eacute;s : &agrave; faire &agrave; l'ouverture, avec la croisi&egrave;re comme vraie activit&eacute; distincte.",
+      "budget": "30-35 &euro;",
+      "budgetDetail": "Remparts 12 &euro; ; croisi&egrave;re 2h30 adulte 20 &euro;.",
+      "effort": "Faible &agrave; mod&eacute;r&eacute;",
+      "duration": "Demi-journ&eacute;e &agrave; journ&eacute;e",
+      "availability": "Remparts 10h-19h ; croisi&egrave;re sur r&eacute;servation selon cr&eacute;neaux",
+      "bestMoment": "10h puis bateau",
+      "activities": [
+        "Visite des tours, remparts et Tour de Constance",
+        "Croisi&egrave;re de Camargue sur le canal",
+        "Pause intra-muros &agrave; l'ombre entre les deux temps"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Tours et remparts d'Aigues-Mortes",
+          "sourceLabel": "Tours et remparts",
+          "source": "https://www.aigues-mortes-monument.fr/visiter/informations-pratiques"
+        },
+        "activityToDo": {
+          "name": "Croisiere decouverte en Camargue",
+          "sourceLabel": "Croisiere de Camargue",
+          "source": "https://www.croisiere-de-camargue.com/produit/croisiere-2h30/"
+        }
+      },
+      "itinerary": [
+        "Arriver &agrave; 10h pour le monument.",
+        "Limiter le temps plein soleil sur les remparts.",
+        "D&eacute;jeuner simple ou pause fra&icirc;che intra-muros.",
+        "Embarquer pour la croisi&egrave;re r&eacute;serv&eacute;e."
+      ],
+      "sources": [
+        [
+          "Tours et remparts",
+          "https://www.aigues-mortes-monument.fr/visiter/informations-pratiques"
+        ],
+        [
+          "Croisi&egrave;re 2h30",
+          "https://www.croisiere-de-camargue.com/produit/croisiere-2h30/"
+        ]
+      ]
+    },
+    {
+      "id": "balaruc-jardin-thau",
+      "title": "Balaruc : Jardin antique + bord de Thau",
+      "emoji": "",
+      "theme": "theme-culture",
+      "image": "assets/balaruc-jardin.jpg",
+      "imageLabel": "Jardin Antique M&eacute;diterran&eacute;en",
+      "drive": "35-45 min",
+      "destination": "Balaruc-les-Bains",
+      "coords": [
+        43.44,
+        3.677
+      ],
+      "badges": [
+        "30-31 mai",
+        "Jardin + expo",
+        "Thau ensuite"
+      ],
+      "pitch": "Une sortie douce pour alterner visite, jardin, exposition et pause au bord de l'eau.",
+      "subtitle": "Le jardin est plus agr&eacute;able le matin ; l'apr&egrave;s-midi peut se finir &agrave; Bouzigues ou M&egrave;ze.",
+      "budget": "5-25 &euro;",
+      "budgetDetail": "Jardin 5 &euro; ; pause, mus&eacute;e compl&eacute;mentaire ou repas en sus.",
+      "effort": "Faible",
+      "duration": "Demi-journ&eacute;e &agrave; journ&eacute;e douce",
+      "availability": "Jardin 10h-12h / 14h-18h, ferm&eacute; lundi seulement",
+      "bestMoment": "matin conseill&eacute;",
+      "activities": [
+        "Visite du Jardin Antique M&eacute;diterran&eacute;en",
+        "Exposition Primavera",
+        "Balade ou terrasse au bord de l'&eacute;tang"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Jardin Antique Mediterraneen de Balaruc",
+          "sourceLabel": "Jardin Antique Mediterraneen",
+          "source": "https://www.archipel-thau.com/le-jardin-antique-mediterraneen-1.html"
+        },
+        "activityToDo": {
+          "name": "Exposition Primavera au jardin",
+          "sourceLabel": "Exposition Primavera",
+          "source": "https://www.archipel-thau.com/primavera-lignes-fertiles-rencontre-et-dessins-au-jardin.html"
+        }
+      },
+      "itinerary": [
+        "D&eacute;part vers Balaruc en matin&eacute;e.",
+        "Jardin et exposition avant midi.",
+        "D&eacute;jeuner simple &agrave; Bouzigues ou M&egrave;ze.",
+        "Balade courte au bord de Thau."
+      ],
+      "sources": [
+        [
+          "Jardin Antique M&eacute;diterran&eacute;en",
+          "https://www.archipel-thau.com/le-jardin-antique-mediterraneen-1.html"
+        ],
+        [
+          "Exposition Primavera",
+          "https://www.archipel-thau.com/primavera-lignes-fertiles-rencontre-et-dessins-au-jardin.html"
+        ]
+      ]
+    },
+    {
+      "id": "lattara-mejean",
+      "title": "Lattes : Lattara + Maison de la Nature du M&eacute;jean",
+      "emoji": "",
+      "theme": "theme-nature",
+      "image": "assets/lattara-mejean.jpg",
+      "imageLabel": "Site arch&eacute;ologique Lattara",
+      "drive": "15-25 min",
+      "destination": "Lattes / M&eacute;jean",
+      "coords": [
+        43.571,
+        3.902
+      ],
+      "badges": [
+        "30-31 mai",
+        "Tr&egrave;s proche",
+        "Mus&eacute;e + lagune"
+      ],
+      "pitch": "Le plan le plus proche et modulable : mus&eacute;e abrit&eacute; puis zone humide du M&eacute;jean, sans grosse route.",
+      "subtitle": "Parfait si vous voulez garder une sortie douce, peu ch&egrave;re, avec eau, oiseaux et repli int&eacute;rieur.",
+      "budget": "0-10 &euro;",
+      "budgetDetail": "Maison de la Nature gratuite ; mus&eacute;e selon collections ou exposition.",
+      "effort": "Faible",
+      "duration": "Demi-journ&eacute;e souple",
+      "availability": "Lattara samedi-dimanche 14h-19h ; M&eacute;jean 14h-18h, sentiers 9h-18h",
+      "bestMoment": "matin M&eacute;jean ou 14h-18h mus&eacute;e",
+      "activities": [
+        "Visite du mus&eacute;e arch&eacute;ologique Lattara",
+        "Observation au site naturel prot&eacute;g&eacute; du M&eacute;jean",
+        "Exposition ou accueil &agrave; la Maison de la Nature"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Site archeologique Lattara - Musee Henri Prades",
+          "sourceLabel": "Musee archeologique",
+          "source": "https://museearcheo.montpellier3m.fr/articles/informations-pratiques-0"
+        },
+        "activityToDo": {
+          "name": "Observation nature au Mejean et Maison de la Nature",
+          "sourceLabel": "Ville de Lattes Service Nature",
+          "source": "https://www.ville-lattes.fr/service-nature/"
+        }
+      },
+      "itinerary": [
+        "Commencer par le M&eacute;jean si vous voulez l'air du matin.",
+        "Basculer au mus&eacute;e Lattara &agrave; 14h.",
+        "Limiter la marche dehors si le soleil tape.",
+        "Finir par une boisson &agrave; Lattes ou Palavas selon l'envie."
+      ],
+      "sources": [
+        [
+          "Mus&eacute;e Lattara infos pratiques",
+          "https://museearcheo.montpellier3m.fr/articles/informations-pratiques-0"
+        ],
+        [
+          "Maison de la Nature - Montpellier Tourisme",
+          "https://www.montpellier-france.com/stay/leisure-and-activities/parks-gardens-and-natural-sites/site-naturel-protege-du-mejean-maison-de-la-nature-lattes-en-3835353/"
+        ],
+        [
+          "Service Nature - Ville de Lattes",
+          "https://www.ville-lattes.fr/service-nature/"
+        ]
+      ]
+    },
+    {
+      "id": "grande-motte-ponant",
+      "title": "La Grande-Motte : sentier du Ponant + accrobranche",
+      "emoji": "",
+      "theme": "theme-sea",
+      "image": "assets/grande-motte-ponant.jpg",
+      "imageLabel": "Sentier du Ponant",
+      "drive": "25-35 min",
+      "destination": "La Grande-Motte / Ponant",
+      "coords": [
+        43.56,
+        4.083
+      ],
+      "badges": [
+        "30-31 mai",
+        "Eau douce",
+        "Activit&eacute; optionnelle"
+      ],
+      "pitch": "Une sortie tr&egrave;s modulable : balade au bord de l'&eacute;tang, architecture baln&eacute;aire et activit&eacute; &agrave; l'ombre des arbres.",
+      "subtitle": "A faire t&ocirc;t pour le sentier, puis garder Ponant Aventure comme option active &agrave; confirmer le jour m&ecirc;me.",
+      "budget": "0-26 &euro;",
+      "budgetDetail": "Sentier gratuit ; Ponant Aventure adulte 26 &euro; si l'ouverture est confirm&eacute;e.",
+      "effort": "Faible &agrave; mod&eacute;r&eacute;",
+      "duration": "Demi-journ&eacute;e",
+      "availability": "Sentier libre ; Ponant Aventure indiqu&eacute; 13h-19h sur la source, &agrave; confirmer pour le 30-31 mai",
+      "bestMoment": "matin ou fin d'apr&egrave;s-midi",
+      "activities": [
+        "Balade sur le sentier du Ponant",
+        "Parcours architecture c&ocirc;t&eacute; pyramides",
+        "Option Ponant Aventure &agrave; v&eacute;rifier avant d'y aller"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Sentier du Ponant a La Grande-Motte",
+          "sourceLabel": "Sentier du Ponant",
+          "source": "https://www.lagrandemotte.com/sentier-du-ponant/"
+        },
+        "activityToDo": {
+          "name": "Option Ponant Aventure a verifier avant depart",
+          "sourceLabel": "Ponant Aventure horaires",
+          "source": "https://www.ponant-aventure.com/article-horaires.188435.6464.html"
+        }
+      },
+      "itinerary": [
+        "Commencer par le sentier avant la chaleur.",
+        "Rejoindre le front de mer pour une pause.",
+        "Appeler ou v&eacute;rifier Ponant Aventure avant de l'ajouter.",
+        "Finir &agrave; la plage seulement si le soleil baisse."
+      ],
+      "sources": [
+        [
+          "Sentier du Ponant",
+          "https://www.lagrandemotte.com/sentier-du-ponant/"
+        ],
+        [
+          "Ponant Aventure horaires",
+          "https://www.ponant-aventure.com/article-horaires.188435.6464.html"
+        ],
+        [
+          "Ponant Aventure tarifs",
+          "https://www.ponant-aventure.com/article-tarifs.188435.51929.html"
+        ]
+      ]
+    },
+    {
+      "id": "restinclieres-geologie",
+      "title": "Restincli&egrave;res : domaine ombrag&eacute; + expo g&eacute;ologie",
+      "emoji": "",
+      "theme": "theme-nature",
+      "image": "assets/restinclieres.jpg",
+      "imageLabel": "Domaine d&eacute;partemental de Restincli&egrave;res",
+      "drive": "25-35 min",
+      "destination": "Prades-le-Lez",
+      "coords": [
+        43.716,
+        3.862
+      ],
+      "badges": [
+        "Dimanche 31",
+        "Ombre",
+        "Gratuit"
+      ],
+      "pitch": "Une option nature tr&egrave;s douce : grand domaine, sentiers courts, rivi&egrave;re et exposition au ch&acirc;teau le dimanche.",
+      "subtitle": "A choisir pour un format tranquille, ombrag&eacute;, sans budget, surtout le dimanche apr&egrave;s-midi.",
+      "budget": "0-10 &euro;",
+      "budgetDetail": "Domaine et exposition gratuits ; pr&eacute;voir pause ou caf&eacute; ailleurs.",
+      "effort": "Faible",
+      "duration": "2h &agrave; demi-journ&eacute;e",
+      "availability": "Domaine ouvert en permanence ; salles expo dimanche 14h-18h, ferm&eacute;es samedi",
+      "bestMoment": "dimanche 14h-17h",
+      "activities": [
+        "Visite du domaine et des abords du ch&acirc;teau",
+        "Exposition G&eacute;ologie et paysages",
+        "Boucle courte &agrave; l'ombre selon la chaleur"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Domaine departemental de Restinclieres",
+          "sourceLabel": "Domaine de Restinclieres",
+          "source": "https://domainederestinclieres.herault.fr/"
+        },
+        "activityToDo": {
+          "name": "Exposition Geologie et paysages au chateau",
+          "sourceLabel": "Agenda Restinclieres",
+          "source": "https://domainederestinclieres.herault.fr/"
+        }
+      },
+      "itinerary": [
+        "Garder cette option pour dimanche.",
+        "Faire une boucle courte dans le domaine.",
+        "Entrer dans l'exposition au ch&acirc;teau entre 14h et 18h.",
+        "Rentrer sans ajouter de marche expos&eacute;e."
+      ],
+      "sources": [
+        [
+          "Domaine de Restincli&egrave;res",
+          "https://domainederestinclieres.herault.fr/"
+        ],
+        [
+          "Agenda Restincli&egrave;res",
+          "https://domainederestinclieres.herault.fr/"
+        ]
+      ]
+    },
+    {
+      "id": "maguelone-salines",
+      "title": "Maguelone : cath&eacute;drale, salines et plage sauvage",
+      "emoji": "",
+      "theme": "theme-sea",
+      "image": "assets/maguelone-plage.jpg",
+      "imageLabel": "Plage et presqu'&icirc;le de Maguelone",
+      "drive": "25-35 min",
+      "destination": "Maguelone / Villeneuve-l&egrave;s-Maguelone",
+      "coords": [
+        43.509,
+        3.884
+      ],
+      "badges": [
+        "30-31 mai",
+        "Tr&egrave;s proche",
+        "Mer + patrimoine"
+      ],
+      "pitch": "Un classique tr&egrave;s efficace : lieu &agrave; visiter, plage sauvage et salines sans grosse logistique.",
+      "subtitle": "A faire t&ocirc;t ou en fin d'apr&egrave;s-midi, parce que la presqu'&icirc;le est lumineuse mais peu ombrag&eacute;e.",
+      "budget": "0-15 &euro;",
+      "budgetDetail": "Cath&eacute;drale et plage libres ; audioguide, parking ou pause en sus.",
+      "effort": "Faible",
+      "duration": "Demi-journ&eacute;e",
+      "availability": "Cath&eacute;drale en journ&eacute;e ; plage et passerelle en acc&egrave;s saisonnier",
+      "bestMoment": "matin ou 17h-19h",
+      "activities": [
+        "Visite de la cath&eacute;drale et du parc",
+        "Balade aux salines ou sur la plage du Pilou",
+        "Pause fra&icirc;cheur c&ocirc;t&eacute; Villeneuve ou Palavas"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Cathedrale et presqu'ile de Maguelone",
+          "sourceLabel": "Presqu'ile de Maguelone",
+          "source": "https://compagnons-de-maguelone.org/visiter-la-presquile/"
+        },
+        "activityToDo": {
+          "name": "Balade aux salines ou plage du Pilou",
+          "sourceLabel": "Plage - Villeneuve-les-Maguelone",
+          "source": "https://www.villeneuvelesmaguelone.fr/sortir-bouger/decouvrir-notre-ville/plage-2/"
+        }
+      },
+      "itinerary": [
+        "Arriver avant la grosse chaleur.",
+        "Visiter la cath&eacute;drale et les abords.",
+        "Choisir salines ou plage selon le vent.",
+        "Rentrer avant le plein soleil ou finir au coucher du jour."
+      ],
+      "sources": [
+        [
+          "Presqu'&icirc;le de Maguelone",
+          "https://compagnons-de-maguelone.org/visiter-la-presquile/"
+        ],
+        [
+          "Plage - Villeneuve-l&egrave;s-Maguelone",
+          "https://www.villeneuvelesmaguelone.fr/sortir-bouger/decouvrir-notre-ville/plage-2/"
+        ]
+      ]
+    },
+    {
+      "id": "sete-theatre-mer",
+      "title": "S&egrave;te : canaux, mus&eacute;e Paul Val&eacute;ry et Th&eacute;&acirc;tre de la Mer",
+      "emoji": "",
+      "theme": "theme-event",
+      "image": "assets/sete-musee.jpg",
+      "imageLabel": "Mus&eacute;e Paul Val&eacute;ry &agrave; S&egrave;te",
+      "drive": "40-50 min",
+      "destination": "S&egrave;te",
+      "coords": [
+        43.39558,
+        3.69088
+      ],
+      "badges": [
+        "30 mai id&eacute;al",
+        "Mus&eacute;e abrit&eacute;",
+        "Soir&eacute;e possible"
+      ],
+      "pitch": "La version journ&eacute;e + soir&eacute;e : un mus&eacute;e au frais, des vues sur la mer et un concert possible le samedi.",
+      "subtitle": "A choisir si vous voulez garder le soleil pour les bords de journ&eacute;e plut&ocirc;t que marcher en plein cagnard.",
+      "budget": "10-60 &euro;",
+      "budgetDetail": "Mus&eacute;e selon formule ; concert pr&eacute;vente 36,50 &euro; si retenu.",
+      "effort": "Faible &agrave; mod&eacute;r&eacute;",
+      "duration": "Apr&egrave;s-midi + soir&eacute;e possible",
+      "availability": "Mus&eacute;e 10h-18h ; concert samedi 30 &agrave; 21h30",
+      "bestMoment": "apr&egrave;s-midi puis soir&eacute;e",
+      "activities": [
+        "Visite du mus&eacute;e Paul Val&eacute;ry",
+        "Balade canaux, port ou Mont Saint-Clair",
+        "Concert au Th&eacute;&acirc;tre de la Mer si r&eacute;serv&eacute;"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Musee Paul Valery a Sete",
+          "sourceLabel": "Musee Paul Valery",
+          "source": "https://www.tourisme-sete.com/musee-paul-valery-sete-1.html"
+        },
+        "activityToDo": {
+          "name": "Concert au Theatre de la Mer le samedi soir",
+          "sourceLabel": "Concert Peter Doherty",
+          "source": "https://www.tourisme-sete.com/peter-doherty-1ere-partie.html"
+        }
+      },
+      "itinerary": [
+        "Arriver apr&egrave;s le d&eacute;jeuner ou en fin d'apr&egrave;s-midi.",
+        "Faire le mus&eacute;e au frais.",
+        "Marcher court c&ocirc;t&eacute; port ou cimeti&egrave;re marin.",
+        "Basculer vers le Th&eacute;&acirc;tre de la Mer si billets."
+      ],
+      "sources": [
+        [
+          "Mus&eacute;e Paul Val&eacute;ry",
+          "https://www.tourisme-sete.com/musee-paul-valery-sete-1.html"
+        ],
+        [
+          "Concert Peter Doherty",
+          "https://www.tourisme-sete.com/peter-doherty-1ere-partie.html"
+        ]
+      ]
+    },
+    {
+      "id": "ambrussum-vidourle",
+      "title": "Ambrussum : pont romain + parcours 3D au bord du Vidourle",
+      "emoji": "",
+      "theme": "theme-culture",
+      "image": "assets/ambrussum.jpg",
+      "imageLabel": "Pont Ambroix et site d'Ambrussum",
+      "drive": "30-40 min",
+      "destination": "Villetelle / Ambrussum",
+      "coords": [
+        43.719,
+        4.148
+      ],
+      "badges": [
+        "30-31 mai",
+        "Vidourle",
+        "Gratuit"
+      ],
+      "pitch": "Une sortie courte et facile : site antique libre, mus&eacute;e gratuit et Vidourle juste &agrave; c&ocirc;t&eacute;.",
+      "subtitle": "Moins frais qu'une grotte, mais pratique si vous voulez un patrimoine dehors sans partir loin.",
+      "budget": "0-10 &euro;",
+      "budgetDetail": "Site et mus&eacute;e gratuits ; tablette 3D ou visite guid&eacute;e payante possible.",
+      "effort": "Faible &agrave; mod&eacute;r&eacute;",
+      "duration": "2h &agrave; demi-journ&eacute;e",
+      "availability": "Site libre ; mus&eacute;e mercredi-dimanche 14h-17h30 en mai",
+      "bestMoment": "matin dehors ou 14h-17h30 mus&eacute;e",
+      "activities": [
+        "Visite du site antique et du Pont Ambroix",
+        "Parcours Ambrussum 3D ou visite guid&eacute;e selon cr&eacute;neau",
+        "Pause courte au bord du Vidourle"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Site archeologique d'Ambrussum et Pont Ambroix",
+          "sourceLabel": "Ambrussum infos pratiques",
+          "source": "https://www.ambrussum.fr/infos-pratiques/"
+        },
+        "activityToDo": {
+          "name": "Parcours Ambrussum 3D ou visite guidee",
+          "sourceLabel": "Ambrussum visiter",
+          "source": "https://www.ambrussum.fr/visiter/"
+        }
+      },
+      "itinerary": [
+        "Faire le sentier t&ocirc;t si vous venez le matin.",
+        "Passer par le mus&eacute;e &agrave; 14h pour le frais.",
+        "Utiliser le parcours 3D ou une visite guid&eacute;e si disponible.",
+        "Finir par une pause courte vers le Vidourle."
+      ],
+      "sources": [
+        [
+          "Ambrussum infos pratiques",
+          "https://www.ambrussum.fr/infos-pratiques/"
+        ],
+        [
+          "Visiter Ambrussum",
+          "https://www.ambrussum.fr/visiter/"
+        ],
+        [
+          "Sites d'Exception",
+          "https://www.sitesdexception.fr/sites/site-archeologique-et-musee-dambrussum/"
+        ]
+      ]
+    },
+    {
+      "id": "train-bambouseraie",
+      "title": "Anduze : Bambouseraie + Train &agrave; vapeur des C&eacute;vennes",
+      "emoji": "",
+      "theme": "theme-nature",
+      "image": "assets/bambouseraie.jpg",
+      "imageLabel": "Bambouseraie en C&eacute;vennes",
+      "drive": "1h10-1h25",
+      "destination": "Bambouseraie / Anduze",
+      "coords": [
+        44.063,
+        3.982
+      ],
+      "badges": [
+        "30-31 mai",
+        "Ombre",
+        "Journ&eacute;e compl&egrave;te"
+      ],
+      "pitch": "La journ&eacute;e ombrag&eacute;e du lot : jardin luxuriant, train touristique et vraie impression de partir ailleurs.",
+      "subtitle": "Plus loin, mais tr&egrave;s coh&eacute;rent si vous voulez &eacute;viter la plage et garder une activit&eacute; forte.",
+      "budget": "16-45 &euro;",
+      "budgetDetail": "Bambouseraie adulte d&egrave;s 15,50 &euro; ; train ou repas en sus.",
+      "effort": "Faible",
+      "duration": "Journ&eacute;e compl&egrave;te",
+      "availability": "Bambouseraie 9h30-19h ; train selon horaires, achat en ligne possible mais non r&eacute;servant",
+      "bestMoment": "journ&eacute;e, d&eacute;part t&ocirc;t",
+      "activities": [
+        "Visite de la Bambouseraie",
+        "Train &agrave; vapeur entre Anduze et Saint-Jean-du-Gard",
+        "Pause &agrave; Anduze ou Saint-Jean-du-Gard"
+      ],
+      "proof": {
+        "placeToVisit": {
+          "name": "Bambouseraie en Cevennes",
+          "sourceLabel": "Bambouseraie preparer la visite",
+          "source": "https://bambouseraie.fr/preparez-votre-visite"
+        },
+        "activityToDo": {
+          "name": "Train a vapeur des Cevennes",
+          "sourceLabel": "Train a Vapeur des Cevennes",
+          "source": "https://www.trainavapeur.com/preparer-mon-voyage/"
+        }
+      },
+      "itinerary": [
+        "Partir t&ocirc;t de Montpellier.",
+        "Caler train et Bambouseraie selon l'horaire choisi ; achat en ligne non r&eacute;servant, places non num&eacute;rot&eacute;es, arriver 30 min avant.",
+        "D&eacute;jeuner simple sur place ou &agrave; Anduze.",
+        "Rentrer en fin d'apr&egrave;s-midi sans ajouter de marche chaude."
+      ],
+      "sources": [
+        [
+          "Train &agrave; Vapeur des C&eacute;vennes",
+          "https://www.trainavapeur.com/preparer-mon-voyage/"
+        ],
+        [
+          "Bambouseraie pr&eacute;parer la visite",
+          "https://bambouseraie.fr/preparez-votre-visite"
+        ]
+      ]
+    }
+  ],
+  "schedulePlans": {
+    "frontignan-canal-aresquiers": {
+      "windows": [
+        [
+          9,
+          18
+        ]
+      ],
+      "recommended": [
+        [
+          9.5,
+          12
+        ],
+        [
+          16,
+          18
+        ]
+      ],
+      "label": "balade 9h-12h ; Aresquiers en prolongement doux",
+      "suggested": "samedi matin"
+    },
+    "maguelone-salines": {
+      "windows": [
+        [
+          9,
+          19
+        ]
+      ],
+      "recommended": [
+        [
+          9,
+          12.5
+        ],
+        [
+          17,
+          19
+        ]
+      ],
+      "label": "cathedrale et presqu'ile en journee, plage plutot hors plein soleil",
+      "suggested": "matin ou fin d'apres-midi"
+    },
+    "bouzigues-thau": {
+      "windows": [
+        [
+          10,
+          12
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "recommended": [
+        [
+          11,
+          12
+        ],
+        [
+          14.5,
+          17.5
+        ]
+      ],
+      "label": "bateau 11h, 14h30 ou 16h ; musee 10h-12h / 14h-18h",
+      "suggested": "11h ou 14h30"
+    },
+    "balaruc-jardin-thau": {
+      "windows": [
+        [
+          10,
+          12
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "recommended": [
+        [
+          10,
+          12
+        ],
+        [
+          16,
+          18
+        ]
+      ],
+      "label": "jardin 10h-12h / 14h-18h ; bord de Thau ensuite",
+      "suggested": "matin conseille"
+    },
+    "sete-theatre-mer": {
+      "windows": [
+        [
+          10,
+          18
+        ]
+      ],
+      "recommended": [
+        [
+          14,
+          18
+        ]
+      ],
+      "label": "musee 10h-18h ; concert samedi soir hors barre",
+      "suggested": "apres-midi puis soiree"
+    },
+    "valmagne-meze": {
+      "windows": [
+        [
+          10,
+          19
+        ]
+      ],
+      "recommended": [
+        [
+          10,
+          13
+        ],
+        [
+          16,
+          19
+        ]
+      ],
+      "label": "marche et abbaye 10h-19h les 30-31",
+      "suggested": "10h-13h ou 16h-19h"
+    },
+    "grande-motte-ponant": {
+      "windows": [
+        [
+          9,
+          19
+        ]
+      ],
+      "recommended": [
+        [
+          9,
+          12
+        ],
+        [
+          16.5,
+          19
+        ]
+      ],
+      "label": "sentier libre ; Ponant Aventure a confirmer pour ces dates",
+      "suggested": "matin ou fin d'apres-midi"
+    },
+    "clamouse-saint-guilhem": {
+      "windows": [
+        [
+          10.5,
+          16
+        ]
+      ],
+      "recommended": [
+        [
+          10.5,
+          12.5
+        ],
+        [
+          15.5,
+          16
+        ]
+      ],
+      "label": "departs Clamouse de 10h30 a 16h en avril-mai-juin",
+      "suggested": "10h30 ou 15h30"
+    },
+    "seaquarium-grau-roi": {
+      "windows": [
+        [
+          9.5,
+          19.5
+        ]
+      ],
+      "recommended": [
+        [
+          13,
+          16.5
+        ],
+        [
+          17.5,
+          19.5
+        ]
+      ],
+      "label": "Seaquarium 9h30-19h30 ; front de mer quand le soleil baisse",
+      "suggested": "13h-16h au frais"
+    },
+    "train-bambouseraie": {
+      "windows": [
+        [
+          9.5,
+          19
+        ]
+      ],
+      "recommended": [
+        [
+          10,
+          13
+        ],
+        [
+          14.5,
+          17
+        ]
+      ],
+      "label": "Bambouseraie 9h30-19h ; train selon departs, achat non reservant",
+      "suggested": "depart tot"
+    },
+    "grotte-demoiselles-herault": {
+      "windows": [
+        [
+          9,
+          18
+        ]
+      ],
+      "recommended": [
+        [
+          13,
+          16.5
+        ]
+      ],
+      "label": "grotte 9h-18h ; dernier depart 16h30",
+      "suggested": "13h-16h au frais"
+    },
+    "aigues-mortes-croisiere": {
+      "windows": [
+        [
+          10,
+          19
+        ],
+        [
+          10.5,
+          17.5
+        ]
+      ],
+      "recommended": [
+        [
+          10,
+          12
+        ],
+        [
+          15,
+          17.5
+        ]
+      ],
+      "label": "remparts 10h-19h ; croisiere selon reservation",
+      "suggested": "10h puis bateau"
+    },
+    "lattara-mejean": {
+      "windows": [
+        [
+          9,
+          18
+        ],
+        [
+          14,
+          19
+        ]
+      ],
+      "recommended": [
+        [
+          9,
+          11.5
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "label": "Mejean 9h-18h ; Maison Nature 14h-18h ; Lattara 14h-19h",
+      "suggested": "matin Mejean ou 14h-18h musee"
+    },
+    "restinclieres-geologie": {
+      "windows": [
+        [
+          14,
+          18
+        ]
+      ],
+      "recommended": [
+        [
+          14,
+          17
+        ]
+      ],
+      "label": "expo dimanche 14h-18h ; domaine libre",
+      "suggested": "dimanche 14h-17h"
+    },
+    "ambrussum-vidourle": {
+      "windows": [
+        [
+          8,
+          19
+        ],
+        [
+          14,
+          17.5
+        ]
+      ],
+      "recommended": [
+        [
+          8.5,
+          11
+        ],
+        [
+          14,
+          17.5
+        ]
+      ],
+      "label": "site libre ; musee 14h-17h30 en mai",
+      "suggested": "matin dehors ou musee l'apres-midi"
+    }
+  }
+}
