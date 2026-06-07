@@ -1,6 +1,13 @@
+# Bibliothèque PRIVÉE : ne doit jamais être publiée
+_bibliotheque_privee/
+
 # Cache brut + debug du générateur LLM (régénérables)
 data/.raw-*.json
 data/.debug-*.txt
 
 # Sorties de build temporaires (autres que le lot publié index.html)
 /*.tmp.html
+
+# Python
+__pycache__/
+*.pyc
